@@ -1,0 +1,55 @@
+name: nzbget
+services:
+  nzbget:
+    environment:
+      NZBGET_PASS: tegbzn6789
+      NZBGET_USER: nzbget
+      PGID: '1000'
+      PUID: '1000'
+      TZ: Europe/London
+    image: linuxserver/nzbget:25.4.20251205
+    deploy:
+      resources:
+        reservations:
+          memory: 64M
+    network_mode: bridge
+    ports:
+    - target: 6789
+      published: '6789'
+      protocol: tcp
+    restart: unless-stopped
+    volumes:
+    - type: bind
+      source: /DATA/PowerLabAppData/nzbget/config
+      target: /config
+    - type: bind
+      source: /DATA/PowerLabAppData/nzbget/data
+      target: /downloads
+version: '3.7'
+x-powerlab:
+  store_app_id: nzbget
+  title: Nzbget
+  tagline: Efficient Usenet downloader
+  category: Media
+  port_map:
+  - container: 6789
+    host: 6789
+    protocol: http
+  source:
+    catalog: casaos-appstore
+    upstream_id: Nzbget
+    upstream_repo: https://github.com/IceWhaleTech/CasaOS-AppStore.git
+    upstream_path: Apps/Nzbget/docker-compose.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.png
+    license: nominative-fair-use
+    attribution: Nzbget (logo trademark; sourced via CasaOS AppStore)
+  security:
+    image_pin: REQUIRES-DIGEST-PIN
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: Nzbget Team
+  developer: Nzbget Team
+  main: nzbget

@@ -1,0 +1,44 @@
+name: autobrr
+services:
+  autobrr:
+    image: ghcr.io/autobrr/autobrr:v1.69.0
+    network_mode: bridge
+    restart: unless-stopped
+    environment:
+      TZ: $TZ
+    ports:
+    - target: 7474
+      published: '7474'
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: /DATA/PowerLabAppData/autobrr/config
+      target: /config
+version: '3.7'
+x-powerlab:
+  store_app_id: autobrr
+  title: Autobrr
+  tagline: Autobrr
+  category: System
+  port_map:
+  - container: 7474
+    host: 7474
+    protocol: http
+  source:
+    catalog: casaos-appstore
+    upstream_id: Autobrr
+    upstream_repo: https://github.com/IceWhaleTech/CasaOS-AppStore.git
+    upstream_path: Apps/Autobrr/docker-compose.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.png
+    license: nominative-fair-use
+    attribution: Autobrr (logo trademark; sourced via CasaOS AppStore)
+  security:
+    image_pin: REQUIRES-DIGEST-PIN
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: Autobrr
+  developer: Autobrr
+  main: autobrr

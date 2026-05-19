@@ -1,0 +1,45 @@
+name: overseerr
+services:
+  overseerr:
+    image: linuxserver/overseerr:1.33.2
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    ports:
+    - target: 5055
+      published: 5055
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: /DATA/PowerLabAppData/overseerr/config
+      target: /config
+version: '3.7'
+x-powerlab:
+  store_app_id: overseerr
+  title: Overseerr
+  tagline: Overseerr
+  category: System
+  port_map:
+  - container: 5055
+    host: 5055
+    protocol: http
+  source:
+    catalog: casaos-appstore
+    upstream_id: Overseerr
+    upstream_repo: https://github.com/IceWhaleTech/CasaOS-AppStore.git
+    upstream_path: Apps/Overseerr/docker-compose.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.png
+    license: nominative-fair-use
+    attribution: Overseerr (logo trademark; sourced via CasaOS AppStore)
+  security:
+    image_pin: REQUIRES-DIGEST-PIN
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: Overseerr
+  developer: Overseerr
+  main: overseerr

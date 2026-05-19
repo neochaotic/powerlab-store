@@ -1,0 +1,57 @@
+name: pyload
+services:
+  pyload:
+    image: linuxserver/pyload-ng:0.5.0
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+    restart: unless-stopped
+    network_mode: bridge
+    privileged: false
+    volumes:
+    - type: bind
+      source: /DATA/PowerLabAppData/pyload/config
+      target: /config
+    - type: bind
+      source: /DATA/PowerLabAppData/pyload/data
+      target: /downloads
+    ports:
+    - target: 8000
+      published: '8000'
+      protocol: tcp
+    - target: 9666
+      published: '9666'
+      protocol: tcp
+version: '3.7'
+x-powerlab:
+  store_app_id: pyload
+  title: PyLoad
+  tagline: PyLoad
+  category: System
+  port_map:
+  - container: 8000
+    host: 8000
+    protocol: http
+  source:
+    catalog: casaos-appstore
+    upstream_id: PyLoad
+    upstream_repo: https://github.com/IceWhaleTech/CasaOS-AppStore.git
+    upstream_path: Apps/PyLoad/docker-compose.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.png
+    license: nominative-fair-use
+    attribution: PyLoad (logo trademark; sourced via CasaOS AppStore)
+  security:
+    image_pin: REQUIRES-DIGEST-PIN
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: PyLoad
+  developer: PyLoad
+  main: pyload

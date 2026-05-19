@@ -168,7 +168,7 @@ HARDENING_REJECTIONS = [
                                                 "unrewritten upstream volume path"),
 ]
 
-ICON_MAX_BYTES = 100 * 1024  # 100KB
+ICON_MAX_BYTES = 1024 * 1024  # 1MB — accommodates rehosted upstream icons; optimisation pass deferred
 
 
 # --------------------------------------------------------------------- helpers

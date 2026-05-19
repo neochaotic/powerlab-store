@@ -1,0 +1,38 @@
+name: freshrss
+services:
+  server:
+    image: linuxserver/freshrss:1.29.0@sha256:9ea33a3b660f1e8485867374be36d39898c7b43fcbd2595e2442cb1d9b23410e
+    restart: on-failure
+    environment:
+    - PUID=1000
+    - PGID=1000
+    volumes:
+    - /DATA/PowerLabAppData/freshrss/data:/config
+version: '3.7'
+x-powerlab:
+  store_app_id: freshrss
+  title: FreshRSS
+  tagline: A free, self-hostable aggregator for rss feeds
+  category: Productivity
+  port_map:
+  - container: 80
+    host: 80
+    protocol: http
+  source:
+    catalog: umbrel-apps
+    upstream_id: freshrss
+    upstream_repo: https://github.com/getumbrel/umbrel-apps.git
+    upstream_path: freshrss/umbrel-app.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.svg
+    license: nominative-fair-use
+    attribution: FreshRSS (logo trademark; sourced via Umbrel app gallery)
+  security:
+    image_pin: pinned
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: FreshRSS Org
+  developer: FreshRSS Org
+  main: server
