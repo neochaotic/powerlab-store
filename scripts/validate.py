@@ -99,20 +99,45 @@ REQUIRED_XPOWERLAB_FIELDS = {
 # maintainer review (docs/curation-criteria.md "Allowed registries").
 TRUSTED_REGISTRY_PREFIXES = (
     "docker.io/library/",
-    "docker.io/nextcloud/",
-    "docker.io/jellyfin/",
-    "docker.io/homeassistant/",
-    "docker.io/linuxserver/",      # alternative form
-    "docker.io/grafana/",
-    "docker.io/prom/",
-    "docker.io/postgres",          # also docker.io/library/postgres
-    "docker.io/redis",
     "ghcr.io/",                    # any verified GHCR org; PR review checks "verified"
     "lscr.io/linuxserver/",        # LinuxServer canonical
     "quay.io/",                    # any verified quay org; PR review checks "verified"
     "registry.k8s.io/",
     "gcr.io/distroless/",
     "mcr.microsoft.com/",
+    "registry.gitlab.com/",        # GitLab Container Registry; verified during PR review
+    # Vendor-published docker.io orgs (the org name on Docker Hub IS the
+    # upstream maintainer or its trademark owner). Adding to this list
+    # requires confirming the org is the official publisher.
+    "docker.io/actualbudget/",
+    "docker.io/codercom/",
+    "docker.io/corentinth/",
+    "docker.io/deluan/",
+    "docker.io/emqx/",
+    "docker.io/excalidraw/",
+    "docker.io/getmeili/",
+    "docker.io/grafana/",
+    "docker.io/homeassistant/",
+    "docker.io/jellyfin/",
+    "docker.io/linuxserver/",
+    "docker.io/louislam/",
+    "docker.io/mariadb",
+    "docker.io/mongo",
+    "docker.io/n8nio/",
+    "docker.io/neosmemo/",
+    "docker.io/nextcloud/",
+    "docker.io/nocodb/",
+    "docker.io/ollama/",
+    "docker.io/photoprism/",
+    "docker.io/postgres",
+    "docker.io/prom/",
+    "docker.io/redis",
+    "docker.io/stirlingtools/",
+    "docker.io/valkey/",
+    "docker.io/vaultwarden/",
+    "docker.io/vectorim/",
+    "docker.io/vikunja/",
+    "docker.io/wallabag/",
 )
 
 REJECTED_IMAGE_SUBSTRINGS = (
