@@ -1,0 +1,202 @@
+name: smoke-spinup
+
+# Tier 3 verification (see CONTRIBUTING / curation-criteria): for each
+# app TOUCHED in this PR, actually bring up the compose, wait for the
+# container to be healthy or for the port to respond, grep logs for
+# error/panic/fatal, then tear down.
+#
+# Static gates (validate.py, check-safety.sh, icon-lint) cover schema +
+# safety + provenance. They DON'T catch "image got deleted upstream",
+# "container crashes on start", "endpoint returns 5xx", or "logs full of
+# panics". This workflow does.
+#
+# Scope: PR-only, touched apps only. Nightly sampling and pre-release
+# full-matrix are separate workflows (see release.yml + future
+# nightly-sample.yml / digest-watch.yml).
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Apps/**'
+
+permissions:
+  contents: read
+
+jobs:
+  detect-touched-apps:
+    name: detect touched apps
+    runs-on: ubuntu-latest
+    outputs:
+      apps: ${{ steps.diff.outputs.apps }}
+      has_apps: ${{ steps.diff.outputs.has_apps }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - id: diff
+        name: Find Apps/<id>/ dirs changed by this PR
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+          apps=$(git diff --name-only "$base" "$head" \
+            | grep -oE '^Apps/[^/]+' \
+            | sort -u \
+            | sed 's|^Apps/||' \
+            | jq -R . | jq -sc .)
+          echo "apps=$apps" >> "$GITHUB_OUTPUT"
+          if [[ "$apps" == "[]" ]]; then
+            echo "has_apps=false" >> "$GITHUB_OUTPUT"
+            echo "No apps touched — smoke-spinup will skip"
+          else
+            echo "has_apps=true" >> "$GITHUB_OUTPUT"
+            echo "Touched apps: $apps"
+          fi
+
+  spinup:
+    name: spinup ${{ matrix.app }}
+    needs: detect-touched-apps
+    if: needs.detect-touched-apps.outputs.has_apps == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJson(needs.detect-touched-apps.outputs.apps) }}
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify app dir + compose exist
+        run: |
+          if [[ ! -f "Apps/${{ matrix.app }}/docker-compose.yml" ]]; then
+            echo "Apps/${{ matrix.app }}/docker-compose.yml missing — was the app removed?"
+            echo "Skipping (removal PR, nothing to spin up)."
+            exit 0
+          fi
+
+      - name: Compose config (syntax)
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          # Substitute PowerLab's runtime env vars with safe defaults
+          # so compose doesn't bail on unresolved ${POWERLAB_APP_NAME} etc.
+          export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
+          export POWERLAB_APP_DATA="/tmp/smoke-data"
+          mkdir -p "$POWERLAB_APP_DATA"
+          docker compose config --quiet
+
+      - name: Pull images
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
+          export POWERLAB_APP_DATA="/tmp/smoke-data"
+          docker compose pull --quiet
+
+      - name: Bring up
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
+          export POWERLAB_APP_DATA="/tmp/smoke-data"
+          docker compose up -d
+
+      - name: Wait for healthy or 60s
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
+          export POWERLAB_APP_DATA="/tmp/smoke-data"
+          # If any service defines a healthcheck, wait for it.
+          # Otherwise just wait 30s for the process to settle.
+          deadline=$(( $(date +%s) + 60 ))
+          have_healthcheck=$(docker compose ps --format json | jq -r '.[] | select(.Health) | .Name' | head -1)
+          if [[ -n "$have_healthcheck" ]]; then
+            echo "Healthcheck present on $have_healthcheck — waiting..."
+            while [[ $(date +%s) -lt $deadline ]]; do
+              status=$(docker inspect --format='{{.State.Health.Status}}' "$have_healthcheck" 2>/dev/null || echo "unknown")
+              if [[ "$status" == "healthy" ]]; then
+                echo "Healthy."
+                exit 0
+              fi
+              if [[ "$status" == "unhealthy" ]]; then
+                echo "FAIL: container reported unhealthy"
+                docker compose logs --tail=50
+                exit 1
+              fi
+              sleep 2
+            done
+            echo "FAIL: did not become healthy within 60s"
+            docker compose logs --tail=50
+            exit 1
+          else
+            echo "No healthcheck defined — sleeping 30s"
+            sleep 30
+          fi
+
+      - name: Probe declared ports
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          # Extract host ports from x-powerlab.port_map and curl them.
+          ports=$(python3 -c "
+          import yaml
+          d = yaml.safe_load(open('docker-compose.yml'))
+          xp = d.get('x-powerlab', {}) or {}
+          if xp.get('headless'):
+              print('HEADLESS')
+              exit(0)
+          for pm in xp.get('port_map', []) or []:
+              proto = (pm.get('protocol') or 'http').lower()
+              if proto in ('http', 'https'):
+                  print(f\"{proto}://localhost:{pm['host']}\")
+          ")
+          if [[ "$ports" == "HEADLESS" ]]; then
+            echo "App declared headless — skipping endpoint probe."
+            exit 0
+          fi
+          if [[ -z "$ports" ]]; then
+            echo "WARN: no http/https port_map entries to probe"
+            exit 0
+          fi
+          fail=0
+          while IFS= read -r url; do
+            # Accept 2xx, 3xx, 401, 403 (auth-gated apps are still alive).
+            # Fail on 5xx or connection refused.
+            code=$(curl -sk -o /dev/null -w '%{http_code}' --max-time 10 "$url" || echo "000")
+            echo "$url -> $code"
+            case "$code" in
+              2*|3*|401|403) ;;
+              5*|000)
+                echo "  FAIL: $url returned $code"
+                fail=1
+                ;;
+              *)
+                echo "  WARN: $url returned $code (accepted but suspicious)"
+                ;;
+            esac
+          done <<< "$ports"
+          exit $fail
+
+      - name: Grep logs for fatal patterns
+        working-directory: Apps/${{ matrix.app }}
+        if: always()
+        run: |
+          export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
+          export POWERLAB_APP_DATA="/tmp/smoke-data"
+          logs=$(docker compose logs --tail=200 2>&1 || true)
+          echo "=== last 200 log lines ==="
+          echo "$logs"
+          echo "=========================="
+          # Patterns that indicate the app is broken even if it didn't
+          # exit. Tolerant of common false positives (e.g. "DEBUG: error
+          # handling: ..." in normal startup chatter).
+          if echo "$logs" | grep -E '^\[?(FATAL|PANIC)\]?|runtime error|segmentation fault|Cannot connect to' | grep -v 'DEBUG\|TRACE'; then
+            echo "FAIL: fatal pattern detected in logs"
+            exit 1
+          fi
+          echo "OK: no fatal patterns"
+
+      - name: Tear down
+        if: always()
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
+          export POWERLAB_APP_DATA="/tmp/smoke-data"
+          docker compose down -v --remove-orphans || true

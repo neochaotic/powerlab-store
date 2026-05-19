@@ -1,0 +1,63 @@
+name: icon-lint
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  icons-present-and-small:
+    name: icon presence + size cap
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Each Apps/<id>/ has icon.svg or icon.png ≤ 100KB
+        run: |
+          set -euo pipefail
+          fail=0
+          if [[ ! -d Apps ]] || [[ -z "$(ls Apps 2>/dev/null)" ]]; then
+            echo "INFO: Apps/ empty or missing — nothing to lint"
+            exit 0
+          fi
+          for d in Apps/*/; do
+            app="$(basename "$d")"
+            icon=""
+            if [[ -f "${d}icon.svg" ]]; then
+              icon="${d}icon.svg"
+            elif [[ -f "${d}icon.png" ]]; then
+              icon="${d}icon.png"
+            else
+              echo "FAIL: $app — missing icon.svg or icon.png" >&2
+              fail=1
+              continue
+            fi
+            size=$(stat -c%s "$icon" 2>/dev/null || stat -f%z "$icon")
+            if (( size > 102400 )); then
+              echo "FAIL: $icon — $size bytes > 100KB cap" >&2
+              fail=1
+            else
+              echo "OK: $icon ($size bytes)"
+            fi
+          done
+          exit $fail
+
+      - name: SVG sanity (no embedded raster, no script tags)
+        run: |
+          set -euo pipefail
+          fail=0
+          for svg in Apps/*/icon.svg; do
+            [[ -f "$svg" ]] || continue
+            if grep -qi '<script' "$svg"; then
+              echo "FAIL: $svg contains <script> (forbidden)" >&2
+              fail=1
+            fi
+            if grep -qi 'data:image' "$svg"; then
+              echo "WARN: $svg has embedded raster (data:image/...). Optimise with SVGO." >&2
+            fi
+          done
+          exit $fail
