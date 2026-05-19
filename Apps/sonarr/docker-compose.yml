@@ -5,7 +5,7 @@ services:
       PGID: $PGID
       PUID: $PUID
       TZ: $TZ
-    image: linuxserver/sonarr:4.0.17
+    image: linuxserver/sonarr:4.0.17@sha256:60f3b6b5c7647ba2bafd81163acfe34b11117b9b834ebd7fbcc3e5f1b309c7ef
     deploy:
       resources:
         reservations:
@@ -48,7 +48,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Sonarr (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Sonarr

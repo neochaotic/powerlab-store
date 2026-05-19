@@ -8,7 +8,7 @@ services:
       PUID: '1000'
       TZ: Europe/London
       USER: casaos
-    image: linuxserver/transmission:4.0.4
+    image: linuxserver/transmission:4.0.4@sha256:7a65725d8720e0e698e7bdeed5315a8b325193c6e95e5c5ab3aa2af9f7908ce9
     deploy:
       resources:
         reservations:
@@ -57,7 +57,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Transmission (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Transmission

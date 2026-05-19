@@ -1,7 +1,7 @@
 name: sure
 services:
   sure-web:
-    image: ghcr.io/we-promise/sure:0.6.5-hotfix.1
+    image: ghcr.io/we-promise/sure:0.6.5-hotfix.1@sha256:d6416171d5b0c13194fe2be9fa1d433f48c1783a8a4c7422ab6001a3ff0ea2af
     volumes:
     - type: bind
       source: /DATA/PowerLabAppData/sure/app/storage
@@ -35,7 +35,7 @@ services:
         reservations:
           memory: 1024M
   sure-worker:
-    image: ghcr.io/we-promise/sure:0.6.5-hotfix.1
+    image: ghcr.io/we-promise/sure:0.6.5-hotfix.1@sha256:d6416171d5b0c13194fe2be9fa1d433f48c1783a8a4c7422ab6001a3ff0ea2af
     command:
     - bundle
     - exec
@@ -67,7 +67,7 @@ services:
         reservations:
           memory: 1024M
   sure-db:
-    image: postgres:16
+    image: postgres:16@sha256:b6ccf02e9b47eac0d67b5eaa0ef56fd59163bffa5506f64e96ceb5053130ec86
     restart: unless-stopped
     volumes:
     - type: bind
@@ -91,7 +91,7 @@ services:
         reservations:
           memory: 1024M
   sure-redis:
-    image: redis:8.2.1-alpine3.22
+    image: redis:8.2.1-alpine3.22@sha256:987c376c727652f99625c7d205a1cba3cb2c53b92b0b62aade2bd48ee1593232
     restart: unless-stopped
     volumes:
     - type: bind
@@ -133,7 +133,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Sure (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Sure

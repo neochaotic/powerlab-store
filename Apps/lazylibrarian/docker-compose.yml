@@ -6,7 +6,7 @@ services:
       PGID: $PGID
       PUID: $PUID
       TZ: $TZ
-    image: linuxserver/lazylibrarian:version-169e669f
+    image: linuxserver/lazylibrarian:version-169e669f@sha256:9f0161cc4e198a4a17407fd5bfdc166300038a1bceb4c735e99ab7380dfdb899
     deploy:
       resources:
         reservations:
@@ -49,7 +49,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Lazylibrarian (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Lazylibrarian Team

@@ -1,7 +1,7 @@
 name: pyload
 services:
   pyload:
-    image: linuxserver/pyload-ng:0.5.0
+    image: linuxserver/pyload-ng:0.5.0@sha256:2ce3ef60cc1bedeaa7590e2810de95bc76dc495d639f5cfa6e20352796afdd58
     deploy:
       resources:
         reservations:
@@ -49,7 +49,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: PyLoad (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: PyLoad

@@ -5,7 +5,7 @@ services:
       PGID: '1000'
       PUID: '1000'
       TZ: Europe/London
-    image: linuxserver/tautulli:2.13.2
+    image: linuxserver/tautulli:2.13.2@sha256:33af6a97f2b027e9b26799ae71e4596fed64051839b94e6b5da0e7cd41e4f218
     deploy:
       resources:
         reservations:
@@ -41,7 +41,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Tautulli (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Tautulli Team

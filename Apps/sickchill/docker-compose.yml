@@ -5,7 +5,7 @@ services:
       PGID: '1000'
       PUID: '1000'
       TZ: Europe/London
-    image: linuxserver/sickchill:2023.6.27
+    image: linuxserver/sickchill:2023.6.27@sha256:fb4f709823e3971b5c965dbdebb45fc77d409bc04be7c1e30e4af5cfb1a573d2
     deploy:
       resources:
         reservations:
@@ -48,7 +48,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Sickchill (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Sickchill Team

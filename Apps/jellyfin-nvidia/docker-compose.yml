@@ -14,7 +14,7 @@ services:
       TZ: $TZ
       CPU_FALLBACK: 'true'
       NVIDIA_VISIBLE_DEVICES: all
-    image: linuxserver/jellyfin:10.10.6
+    image: linuxserver/jellyfin:10.10.6@sha256:3ade631e7085ce6d8ce4b477191152ab51316f0293f23be7531508324cae7b37
     deploy:
       resources:
         reservations:
@@ -71,7 +71,7 @@ x-powerlab:
     license: CC-BY-SA-4.0
     attribution: Jellyfin_Nvidia (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Jellyfin_Nvidia

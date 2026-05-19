@@ -1,7 +1,7 @@
 name: mongo
 services:
   mongo:
-    image: mongo:8.2.2
+    image: mongo:8.2.2@sha256:bf5995bcccb65725aa81fd92e68449323c94b96bf1c1fa9f7acbc2a8ad518114
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -40,7 +40,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Mongo (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Mongo

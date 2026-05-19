@@ -5,7 +5,7 @@ services:
       PGID: '1000'
       PUID: '1000'
       TZ: Europe/London
-    image: linuxserver/prowlarr:2.3.5
+    image: linuxserver/prowlarr:2.3.5@sha256:a89f252d6a22bd25af14a5380aec0adcc3c3af2e3282164f981680e6844070f3
     deploy:
       resources:
         reservations:
@@ -42,7 +42,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Prowlarr (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Prowlarr Team

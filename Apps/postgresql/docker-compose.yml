@@ -8,7 +8,7 @@ services:
       POSTGRES_USER: casaos
       POSTGRES_PASSWORD: casaos
       POSTGRES_DB: casaos
-    image: postgres:17.4
+    image: postgres:17.4@sha256:304ab813518754228f9f792f79d6da36359b82d8ecf418096c636725f8c930ad
     deploy:
       resources:
         reservations:
@@ -44,7 +44,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: PostgreSQL (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: PostgreSQL

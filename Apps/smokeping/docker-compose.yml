@@ -5,7 +5,7 @@ services:
       PGID: '1000'
       PUID: '1000'
       TZ: Europe/London
-    image: linuxserver/smokeping:2.8.2
+    image: linuxserver/smokeping:2.8.2@sha256:b7f906899cd3e24f2a867013b3cd1ae4e3817a65740080717290a259d097ad0c
     deploy:
       resources:
         reservations:
@@ -45,7 +45,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Smokeping (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Lazylibrarian Team

@@ -5,7 +5,7 @@ services:
       PGID: $PGID
       PUID: $PUID
       TZ: $TZ
-    image: ghcr.io/henriquesebastiao/downtify:2.6.0
+    image: ghcr.io/henriquesebastiao/downtify:2.6.0@sha256:7a71e6b510b28a5f34dec033ca52a3a7b0713cb44924d77101961a4c2697aabb
     deploy:
       resources:
         reservations:
@@ -44,7 +44,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Downtify (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Downtify

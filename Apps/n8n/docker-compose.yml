@@ -4,7 +4,7 @@ services:
     environment:
       TZ: $TZ
       N8N_SECURE_COOKIE: 'false'
-    image: n8nio/n8n:1.123.0
+    image: n8nio/n8n:1.123.0@sha256:e1c87fb78c3d3f58f08263fb4710a270453982945616d5fc4ddb60f4524c51fc
     deploy:
       resources:
         reservations:
@@ -41,7 +41,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: n8n (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: n8n

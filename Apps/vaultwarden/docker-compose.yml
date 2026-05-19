@@ -1,7 +1,7 @@
 name: vaultwarden
 services:
   vaultwarden:
-    image: vaultwarden/server:1.32.7
+    image: vaultwarden/server:1.32.7@sha256:7a0aa23c0947be3582898deb5170ea4359493ed9a76af2badf60a7eb45ac36af
     deploy:
       resources:
         reservations:
@@ -38,7 +38,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Vaultwarden (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Daniel García

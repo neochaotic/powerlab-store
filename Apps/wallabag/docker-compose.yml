@@ -1,7 +1,7 @@
 name: wallabag
 services:
   wallabag:
-    image: wallabag/wallabag:2.6.13
+    image: wallabag/wallabag:2.6.13@sha256:efa1c00736e0544291dd104f8f3092ca5e88076862e9e034ae9cd3eaa9d36daa
     deploy:
       resources:
         reservations:
@@ -51,7 +51,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Wallabag (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Wallabag

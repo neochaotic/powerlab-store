@@ -5,7 +5,7 @@ services:
       PGID: $PGID
       PUID: $PUID
       TZ: $TZ
-    image: linuxserver/readarr:0.3.10-develop
+    image: linuxserver/readarr:0.3.10-develop@sha256:c39c1fe2e48e9353a2d81294d70b7624975ae8d603c3cae8df77583d3efeca5b
     deploy:
       resources:
         reservations:
@@ -48,7 +48,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Readarr (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Readarr Team

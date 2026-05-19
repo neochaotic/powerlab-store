@@ -1,7 +1,7 @@
 name: hugo
 services:
   hugo:
-    image: ghcr.io/gohugoio/hugo:v0.152.2
+    image: ghcr.io/gohugoio/hugo:v0.152.2@sha256:d2952bdcfa3b0b25ca3d2104394c2883ffa86abb88855515f01b23b5e8f1355b
     deploy:
       resources:
         reservations:
@@ -44,7 +44,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Hugo (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Hugo

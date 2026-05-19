@@ -5,7 +5,7 @@ services:
       PGID: $PGID
       PUID: $PUID
       TZ: $TZ
-    image: linuxserver/mylar3:0.8.3
+    image: linuxserver/mylar3:0.8.3@sha256:4e81d9559b60e6ded17f11b6c4d2e48efcdc962ccb6415f487f81621cab53b74
     deploy:
       resources:
         reservations:
@@ -48,7 +48,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Mylar3 (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Mylar3 Team

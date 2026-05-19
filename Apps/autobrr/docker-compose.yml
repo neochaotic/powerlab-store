@@ -1,7 +1,7 @@
 name: autobrr
 services:
   autobrr:
-    image: ghcr.io/autobrr/autobrr:v1.69.0
+    image: ghcr.io/autobrr/autobrr:v1.69.0@sha256:b14f129e3c6293a595e7a03e025e5c7dd4095bd96100f2889a226816ae39ee0a
     network_mode: bridge
     restart: unless-stopped
     environment:
@@ -36,7 +36,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Autobrr (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Autobrr

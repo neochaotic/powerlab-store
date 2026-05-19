@@ -7,7 +7,7 @@ services:
       PGID: '1000'
       PUID: '1000'
       TZ: Europe/London
-    image: linuxserver/nzbget:25.4.20251205
+    image: linuxserver/nzbget:25.4.20251205@sha256:1ecf2cbb7ca98d2893682e01d6c30bd4f912c5e217e329e2fdd73af20a0b67dd
     deploy:
       resources:
         reservations:
@@ -47,7 +47,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Nzbget (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Nzbget Team

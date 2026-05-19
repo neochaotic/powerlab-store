@@ -1,7 +1,7 @@
 name: grafana
 services:
   grafana:
-    image: grafana/grafana:12.1.4
+    image: grafana/grafana:12.1.4@sha256:553160ed532b89bac217ffd424c2d7fb62a1dfbc49685d29993795b77e9cea9a
     deploy:
       resources:
         reservations:
@@ -39,7 +39,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Grafana (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: grafana

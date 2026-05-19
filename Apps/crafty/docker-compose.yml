@@ -1,7 +1,7 @@
 name: crafty
 services:
   crafty:
-    image: registry.gitlab.com/crafty-controller/crafty-4:4.4.11
+    image: registry.gitlab.com/crafty-controller/crafty-4:4.4.11@sha256:c9706200aec4f273468b0b58c4bc1e118c9935ca371dd29ca9c114ff8595a34b
     restart: always
     environment:
     - TZ=Etc/UTC
@@ -38,7 +38,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Crafty (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Crafty Team

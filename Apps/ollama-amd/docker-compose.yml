@@ -1,7 +1,7 @@
 name: ollama-amd
 services:
   ollama:
-    image: ollama/ollama:0.9.5-rocm
+    image: ollama/ollama:0.9.5-rocm@sha256:f72c60a04f9679390818c0cd797e109375e76869c795c005a6081a14761f324f
     restart: unless-stopped
     environment:
       OLLAMA_HOST: 0.0.0.0:11434
@@ -53,7 +53,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Ollama (AMD GPU / ROCm)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Ollama

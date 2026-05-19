@@ -1,7 +1,7 @@
 name: audiobookshelf
 services:
   audiobookshelf:
-    image: ghcr.io/advplyr/audiobookshelf:2.30.0
+    image: ghcr.io/advplyr/audiobookshelf:2.30.0@sha256:6fbd7dc95d53c6e168ce69e760b87c334e3b9ba88bf7b8531ed5a116d5d6da03
     deploy:
       resources:
         reservations:
@@ -36,7 +36,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Audiobookshelf (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Audiobookshelf

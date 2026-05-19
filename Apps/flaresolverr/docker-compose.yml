@@ -15,7 +15,7 @@ services:
       resources:
         reservations:
           memory: 64M
-    image: ghcr.io/flaresolverr/flaresolverr:v3.4.5
+    image: ghcr.io/flaresolverr/flaresolverr:v3.4.5@sha256:4f4e5f759aa3a9a64305e99188ea1db1ec2944a5e7d290d2b089af5f2f6f48e4
     labels:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FlareSolverr/icon.png
     ports:
@@ -47,7 +47,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: FlareSolverr (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: FlareSolverr

@@ -5,7 +5,7 @@ services:
       PGID: '1000'
       PUID: '1000'
       TZ: Europe/London
-    image: linuxserver/embystat:0.2.0
+    image: linuxserver/embystat:0.2.0@sha256:adc479353fc0b810c21935a8fe3c2d20d9f7027edc9574477d702ec2ad414754
     deploy:
       resources:
         reservations:
@@ -42,7 +42,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Embystat (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Embystart Team

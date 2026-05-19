@@ -1,7 +1,7 @@
 name: actualbudget
 services:
   actualbudget:
-    image: actualbudget/actual-server:25.7.1
+    image: actualbudget/actual-server:25.7.1@sha256:b6bb759f31d1c2c82a37d04f9d8930359ae8e3b3faa8eaa5338a0a2328702908
     deploy:
       resources:
         reservations:
@@ -37,7 +37,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: ActualBudget (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: ActualBudget

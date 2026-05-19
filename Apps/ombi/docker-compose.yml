@@ -6,7 +6,7 @@ services:
       PGID: '1000'
       PUID: '1000'
       TZ: Europe/London
-    image: linuxserver/ombi:4.47.1
+    image: linuxserver/ombi:4.47.1@sha256:8bf174e9675736d1ef39ead16e3012282962f72a7272284069f4c2a343d23bed
     deploy:
       resources:
         reservations:
@@ -43,7 +43,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Ombi (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Sabnzbd Team

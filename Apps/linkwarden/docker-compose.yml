@@ -1,7 +1,7 @@
 name: linkwarden
 services:
   linkwarden:
-    image: ghcr.io/linkwarden/linkwarden:v2.14.1
+    image: ghcr.io/linkwarden/linkwarden:v2.14.1@sha256:31cf4bd2a2e111991fa5c9de03174c8698869c83722105c6ce529e4c911e6861
     restart: unless-stopped
     depends_on:
       linkwarden-postgres:
@@ -33,7 +33,7 @@ services:
         reservations:
           memory: 512m
   linkwarden-postgres:
-    image: postgres:16-alpine
+    image: postgres:16-alpine@sha256:16bc17c64a573ef34162af9298258d1aec548232985b33ed7b1eac33ba35c229
     restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
@@ -58,7 +58,7 @@ services:
         reservations:
           memory: 256m
   linkwarden-meilisearch:
-    image: getmeili/meilisearch:v1.12.8
+    image: getmeili/meilisearch:v1.12.8@sha256:c9fac23131cca4db95173d41cc50fd5639121ee381795528fdd7522d7978a7b8
     restart: unless-stopped
     environment:
       MEILI_MASTER_KEY: kZWvi7wFylRjEnOTnNrNucG3d7c892HlIBtN3Vr8M-0
@@ -95,7 +95,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Linkwarden (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Linkwarden

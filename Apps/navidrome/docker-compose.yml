@@ -5,7 +5,7 @@ services:
       resources:
         reservations:
           memory: 1024M
-    image: deluan/navidrome:0.58.5
+    image: deluan/navidrome:0.58.5@sha256:648ebd45c50c58edc7ad9f0cc3b4411a1bece16c81f0b3630a0ab0a739c6d7ec
     labels:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Navidrome/icon.png
     restart: unless-stopped
@@ -50,7 +50,7 @@ x-powerlab:
     license: nominative-fair-use
     attribution: Navidrome (logo trademark; sourced via CasaOS AppStore)
   security:
-    image_pin: REQUIRES-DIGEST-PIN
+    image_pin: pinned
     audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
       no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
   author: Navidrome
