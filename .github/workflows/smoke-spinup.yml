@@ -61,6 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      max-parallel: 5           # cap so bulk-import PRs (e.g. Phase 1, 135 apps) don't saturate Actions queue
       matrix:
         app: ${{ fromJson(needs.detect-touched-apps.outputs.apps) }}
     timeout-minutes: 8
