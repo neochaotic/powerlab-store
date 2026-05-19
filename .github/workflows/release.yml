@@ -1,0 +1,73 @@
+name: release
+
+# Fires on a vX.Y.Z tag push. Validates one more time, then publishes a
+# GitHub release pointing at the tag — the catalog itself is served by
+# raw.githubusercontent.com at the tag ref. NO tarball asset
+# (intentional: operators / core pull files directly).
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write       # needed to create the GitHub release
+
+jobs:
+  release:
+    name: validate + publish github release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validator deps
+        run: pip install pyyaml
+
+      - name: Validate (strict)
+        run: ./scripts/validate.py Apps/
+
+      - name: Safety (strict)
+        run: ./scripts/check-safety.sh
+
+      - name: Index.json matches tag
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          if [[ -f index.json ]]; then
+            in_idx="$(python3 -c 'import json; print(json.load(open("index.json"))["store_version"])')"
+            if [[ "$in_idx" != "$tag" ]]; then
+              echo "FAIL: index.json store_version=$in_idx does not match tag $tag" >&2
+              echo "Run scripts/cut-release.sh $tag and recommit." >&2
+              exit 1
+            fi
+            echo "OK: index.json matches tag $tag"
+          else
+            echo "WARN: no index.json committed at tag $tag — releases should include it"
+          fi
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          notes_arg=""
+          if [[ -f CHANGELOG.md ]]; then
+            # Extract just this version's section if changie was used
+            section="$(awk -v tag="${tag#v}" '
+              $0 ~ "^## "tag"( |$|\\))" {p=1; next}
+              p && /^## / {exit}
+              p {print}
+            ' CHANGELOG.md)"
+            if [[ -n "$section" ]]; then
+              echo "$section" > /tmp/release-notes.md
+              notes_arg="--notes-file /tmp/release-notes.md"
+            fi
+          fi
+          gh release create "$tag" \
+            --title "powerlab-store $tag" \
+            ${notes_arg:---generate-notes}

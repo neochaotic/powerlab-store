@@ -1,0 +1,25 @@
+kind: Added
+body: |
+  Initial repo bootstrap: license (AGPL-3.0 code + CC-BY-SA-4.0 content),
+  CONTRIBUTING with app submission flow + trust matrix, SECURITY policy,
+  Code of Conduct.
+
+  Documentation: docs/schema.md (canonical x-powerlab spec),
+  docs/curation-criteria.md (registry trust + safety rules),
+  docs/icon-guidelines.md (rehost policy, attribution).
+
+  Scripts: validate.py (schema + safety + registry trust + .sh ban +
+  digest-pin strict), check-safety.sh (compose hardening mirror of core),
+  pin-digests.sh (BSD/GNU sed-safe), build-index.sh (no tarball — just
+  index.json), cut-release.sh (mandatory pre-tag step).
+
+  CI workflows: validate.yml (schema + safety + changie fragment),
+  icon-lint.yml (presence + size cap + SVG sanity), smoke-spinup.yml
+  (Tier 3: PR-touched apps actually `docker compose up -d`, healthcheck,
+  port probe, log error grep), release.yml (validate + GitHub release
+  on tag push).
+
+  Templates: PR template with split checklists, new-app + app-bug issue
+  templates.
+
+  Changie config + initial CHANGELOG header. VERSION at 0.1.0-dev.
