@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "store_version": "0.1.0-dev",
+  "store_version": "0.1.0",
   "min_powerlab_version": "0.7.0",
   "apps_count": 135,
   "apps": [
