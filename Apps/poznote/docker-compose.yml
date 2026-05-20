@@ -26,7 +26,7 @@ services:
     image: ghcr.io/timothepoznanski/poznote-mcp:6.10.0@sha256:8ee0b5cb86c2481cdda404e4159d934b4fe466270a33e7fb966d48d7559f918f
     restart: on-failure
     environment:
-      POZNOTE_API_URL: http://poznote_app_1:80/api/v1
+      POZNOTE_API_URL: http://app:80/api/v1
       POZNOTE_DEBUG: ${POZNOTE_DEBUG:-false}
     ports:
     - 8340:8045
