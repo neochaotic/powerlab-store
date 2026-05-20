@@ -1,5 +1,0 @@
-kind: Fixed
-body: 'Normalised leaked Umbrel-isms that broke apps under PowerLab core (caught by core''s strict catalog gates before shipping). Rewrote Compose-v1 container hostnames to service-name aliases in 16 apps (e.g. booklore_db_1 -> db, runtime DB-unreachable bug), stripped the leaked ${UMBREL_ROOT} segment from volume paths in 4 apps (kiwix, metube, mstream, pyload-ng), and removed an empty volumes:[] key from mainsail (rejected by core''s compose-go loader). Dropped dcrpulse (hard-coupled to Umbrel''s Tor proxy infra with no PowerLab equivalent). Added three validate.py regression gates so these classes cannot recur: Compose-v1 hostname pattern, ${UMBREL_*}/${TOR_PROXY_*} placeholders, and empty volumes lists.'
-time: 2026-05-20T17:00:00Z
-custom:
-    Issue: "402"

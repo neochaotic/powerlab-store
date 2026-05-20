@@ -1,8 +1,8 @@
 {
   "schema_version": "1",
-  "store_version": "0.1.0",
+  "store_version": "0.1.1",
   "min_powerlab_version": "0.7.0",
-  "apps_count": 135,
+  "apps_count": 134,
   "apps": [
     {
       "store_app_id": "actualbudget",
@@ -99,7 +99,7 @@
         "attribution": "Affine (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "1787ef35dd1d1c8b7a587f9ec8af9ccf4cc59f63b99642a64ac7fc8795a0fff6"
       },
-      "compose_sha256": "eabe3bd93df523c62f60b71d10b7d86e985661ac889b5362ee6726775a966dde",
+      "compose_sha256": "4880504a2be8050acdd644fb2f45fcd8f4c0a4271df6a58a70cf328f9f98a5ca",
       "arch": [
         "amd64",
         "arm64"
@@ -303,7 +303,7 @@
         "attribution": "Bitmagnet (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "bec248950c5535bc7935889f30faa8c54607603535c09c44f69cc04555991663"
       },
-      "compose_sha256": "8e5b2538a19fcc66a69302e0f21c2206e16046eb94caf0babb3db27b4d98e1d1",
+      "compose_sha256": "e216797f31ef5985c2a90916635f7a7edc0c4d7b483afea032536fd7561869c1",
       "arch": [
         "amd64",
         "arm64"
@@ -337,7 +337,7 @@
         "attribution": "BookLore (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "56b84be70bbea846879fef7d798b64da8b5351717a09fff25c269d3154188b23"
       },
-      "compose_sha256": "a86702050ce31a280dd326978e25cc6c705882f1e5cb6c4c00dd7b15da7b6cad",
+      "compose_sha256": "d49e2161d2739c62d58f516103517e7233083ccf9c52c770a88c44207411e0a2",
       "arch": [
         "amd64",
         "arm64"
@@ -405,7 +405,7 @@
         "attribution": "Campfire (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "655cdb77994ab9abfc4f89c9ac6174c11fb3c9c34230c1dbd82402dbdab90b7f"
       },
-      "compose_sha256": "ada7d36d1665b0f57d9365ba5b4c47409d09549f9a41fd2b08fad36b5f9bdc5a",
+      "compose_sha256": "ae6edc5903a50ba9e7219e70f28b11db4308fa840d662cc80ec8897446b72416",
       "arch": [
         "amd64",
         "arm64"
@@ -644,40 +644,6 @@
         "sha256": "117ad27dcf8e4f201ab7a5cf6ca7c4bcd414ff7826b0de0ef1f649bd418f954c"
       },
       "compose_sha256": "7a299bc2a785790a586d8796a21d82bf37436ece8a98fefb574a35da42769e22",
-      "arch": [
-        "amd64",
-        "arm64"
-      ],
-      "resource_hints": {}
-    },
-    {
-      "store_app_id": "dcrpulse",
-      "title": "Decred Pulse",
-      "tagline": "Full Decred node with watch-only wallet and database-free block explorer",
-      "category": "Finance",
-      "headless": false,
-      "port_map": [
-        {
-          "container": 8735,
-          "host": 8735,
-          "protocol": "http"
-        }
-      ],
-      "source": {
-        "catalog": "umbrel-apps",
-        "upstream_id": "dcrpulse",
-        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
-        "upstream_path": "dcrpulse/umbrel-app.yml",
-        "transform_version": "1.0-powerlab-secure",
-        "synced_at": "2026-05-19T02:27:01Z"
-      },
-      "icon": {
-        "file": "icon.svg",
-        "license": "nominative-fair-use",
-        "attribution": "Decred Pulse (logo trademark; sourced via Umbrel app gallery)",
-        "sha256": "3efc51956d2ab4a7dc79e4c5ffb9f971ddcb1de2e84e15aeaf1924f04f1c52a6"
-      },
-      "compose_sha256": "be72b83ce2ddda20e92d1e0a12757eebf8c4bafcd7820906774b3d28beed02a8",
       "arch": [
         "amd64",
         "arm64"
@@ -1187,7 +1153,7 @@
         "attribution": "Ghost (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "6540a60a135065e03ecb182aafddbf23f5de801ac0ca8528a1ca3b29f0329826"
       },
-      "compose_sha256": "98cc00df41f70e7295af8842153c30a87259e7e5f03124bc8d382481798fab63",
+      "compose_sha256": "a73ff758a59b00be47701f7c4b1b2102e090fe3d3143b0c2053c1435ec238461",
       "arch": [
         "amd64",
         "arm64"
@@ -1391,7 +1357,7 @@
         "attribution": "HortusFox (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "1c7e5224d5390c0e401474342b88ed8aa610580bf35d6fb56d0642138c69361c"
       },
-      "compose_sha256": "c1bb429672ea784e1076413d64c230e9fb6c490e43cd1ad159cdf2cdaa59d4d6",
+      "compose_sha256": "a7b56932900f805e2d9054640b6d6dfcfa8db66a60163a875d1ecc756f605e72",
       "arch": [
         "amd64",
         "arm64"
@@ -1493,7 +1459,7 @@
         "attribution": "Invio (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "e9ba699305858bacc6028eeb35be5be135ccf38415ef4911e97742b196207a8f"
       },
-      "compose_sha256": "be47dc982246e252ea882e5dfd76b147ec6cb1ff26ca98d292cf874739d9246f",
+      "compose_sha256": "a3dfb3f54a4a3c4ad678acf48ac734b219933a9cceb140291a96551ee835c2a2",
       "arch": [
         "amd64",
         "arm64"
@@ -1731,7 +1697,7 @@
         "attribution": "kan (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "3a71478756eefe81384ad3ec0f58d9b21dc94396d163d5ce1c1e543a4df554cd"
       },
-      "compose_sha256": "41bacef4117e98064c1ba12fadb97f652f10cce2f46a287fd7725fd696bffd23",
+      "compose_sha256": "3ec306a0f4c5531c8d39c93102ebe1bda5df4af840ba9a4638b26ae99654184b",
       "arch": [
         "amd64",
         "arm64"
@@ -1765,7 +1731,7 @@
         "attribution": "Kiwix (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "559acd2c9845cee314fbb33a7950f06c9c6ebe4dfeeb521aba05a7d37b77644c"
       },
-      "compose_sha256": "c022aa79afe05f997c8d273b307990e16bef254abeace0f6d63e3ec86312c747",
+      "compose_sha256": "c799bf61ee5e70b37d08f85e87543e97a944aabe1f385e29d57427a08c770f8e",
       "arch": [
         "amd64",
         "arm64"
@@ -2037,7 +2003,7 @@
         "attribution": "Mainsail (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "3605240da369aa06939afbd01eca35c0cb6a9ba3545c60c549bd3ab534484d19"
       },
-      "compose_sha256": "72d142b6b58204f2e29165afb091c230d0ca8a9199fab4bfa15d469b72e1d904",
+      "compose_sha256": "737dee74fb0effa0a3e30a6ff16155e121bb2142752bddd3036f7e497752b697",
       "arch": [
         "amd64",
         "arm64"
@@ -2241,7 +2207,7 @@
         "attribution": "MeTube (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "3d0b345e1a33fed882d19a0aa9d54b4f60a77179680267c23141828697b41f09"
       },
-      "compose_sha256": "29df9f154334c51b9f571702e354475c5aa734204ea5e173b09262516296ba58",
+      "compose_sha256": "5d775e3fd980b6c59973c3c3a78ceef5ac7446b1433d0ef4bcc1ce272b924b23",
       "arch": [
         "amd64",
         "arm64"
@@ -2309,7 +2275,7 @@
         "attribution": "Monetr (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "229b5d110fde28f0cabf76d9bc6cb7eae114b8b30de2cea69478bf9a5581ff19"
       },
-      "compose_sha256": "8af3edc01fecf6bd7bd0f01d64a1229f047038427316f052ccc539528307d2c6",
+      "compose_sha256": "24682ed7ade7652fb4ffb0d2954b0abbc7fafe24a20f0ac777a6645717c03d54",
       "arch": [
         "amd64",
         "arm64"
@@ -2479,7 +2445,7 @@
         "attribution": "mStream (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "5b150185dfc1109d787798761a3772a45f8e4a9fbad3a9a6a021a194ad3c307f"
       },
-      "compose_sha256": "eb62b17920997976c5d6628775858848abb8f1d35d8bc8bb501a108478d12f58",
+      "compose_sha256": "34f3c8c061c0ff37b03d93e99210e140780768411fa55cdf59edaa7894e7a478",
       "arch": [
         "amd64",
         "arm64"
@@ -2683,7 +2649,7 @@
         "attribution": "NocoDB (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "138f1189212291857b5085310dfca981d8b5c90bcc6a89f1f068588968f8f51e"
       },
-      "compose_sha256": "7a667dcc99f5d18cb4d6dd131131ee9e297606fcd5531f0859f3123fca9ff6c5",
+      "compose_sha256": "1313100d25255809a1c142e20b636266c56afb1f73e4c90addb747a191d4afe3",
       "arch": [
         "amd64",
         "arm64"
@@ -3159,7 +3125,7 @@
         "attribution": "Picsur (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "4a188417288a88be27c01eb37ebab3f25ac70f84a8697f26de13635c7746c1e9"
       },
-      "compose_sha256": "0932aa5359e62528822da2594aaf7b2a34a09ab48e6c29ca104ee90fcb7e5609",
+      "compose_sha256": "81a0fbed31597c33cc0d58eb5f164ad0dab1fded9ec0791280b0280af9a16667",
       "arch": [
         "amd64",
         "arm64"
@@ -3261,7 +3227,7 @@
         "attribution": "Poznote (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "b76b70abde15882c569b07141282ca6a4dc49ee0c3e605c58bd3ce1987b654d6"
       },
-      "compose_sha256": "f834e561e1da40bc6f45262a46869fcce0c61f866c88824fc8cf6688ce365425",
+      "compose_sha256": "b04012b8573384b19bb4327da44625134605ace7b4153fc1fed007f67810df4a",
       "arch": [
         "amd64",
         "arm64"
@@ -3363,7 +3329,7 @@
         "attribution": "pyload-ng (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "df663bfaf18fb401361847c159441e4ce7f93f00f5890a169b1d887a7998a568"
       },
-      "compose_sha256": "053bc4e9bdf8f300b1f93fd84de871d8ba255808af9d73efa21238866cb52dd0",
+      "compose_sha256": "7af5b4590ced19b2828e2298d2ef53f47acd2b43b8a9fa7d41c1ff3884f9901d",
       "arch": [
         "amd64",
         "arm64"
@@ -3499,7 +3465,7 @@
         "attribution": "Readur (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "bf31c0e43b9676ce2e27dd4a5e92bc3bdbca12e3ba7097aef8e9011e814e7ae6"
       },
-      "compose_sha256": "4eac0ec96be1234920e92f7066edf0c53e18ab56e7b6c5f7f82586cff4ab366c",
+      "compose_sha256": "f3cd0165dd3a8c13be090dcf5883e7a0ffe1356a860174faa4b806297c02c57d",
       "arch": [
         "amd64",
         "arm64"
@@ -4111,7 +4077,7 @@
         "attribution": "Umami (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "490ebe55b0da90885515dba03b2f64ca7ce2de9caa81aea5f63ab8787ff44bc4"
       },
-      "compose_sha256": "640e2a2e6bf2b3923042e7fcf1f107e068aa74d1273ac7c8f9fa35d75f0088cd",
+      "compose_sha256": "ad10bd54649ca94434e0cafbc39394dce6a170dce7ec5f09f14c78b87da6715a",
       "arch": [
         "amd64",
         "arm64"
@@ -4315,7 +4281,7 @@
         "attribution": "Vikunja (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "232710ee4aa598611b36aca576fdff4c982ac55152b902fe98ca742b73d7fcf2"
       },
-      "compose_sha256": "2c3d6aa464eec2d01863ec135f55662821397cc16dba1b176702191c67a3c315",
+      "compose_sha256": "1a763dd5c5ce70d505688ec650728cf41f81f1d477bbf74f3c25866b51641813",
       "arch": [
         "amd64",
         "arm64"
@@ -4485,7 +4451,7 @@
         "attribution": "WordPress (logo trademark; sourced via Umbrel app gallery)",
         "sha256": "fdeda6d1a42d3d4203161789767a7efcc2bcb613bcb2be10bc2b1dae3d22a9c2"
       },
-      "compose_sha256": "2decaa9932b24a531c223fabff18e481d8ee6549523c3007fb107c70ce68a978",
+      "compose_sha256": "b425cf59f5ef98f79ebb5cc946c8209776b4b9b6f7690e572c1d8fe233bb366e",
       "arch": [
         "amd64",
         "arm64"
