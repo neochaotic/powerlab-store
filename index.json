@@ -1,0 +1,4598 @@
+{
+  "schema_version": "1",
+  "store_version": "0.1.0-dev",
+  "min_powerlab_version": "0.7.0",
+  "apps_count": 135,
+  "apps": [
+    {
+      "store_app_id": "actualbudget",
+      "title": "ActualBudget",
+      "tagline": "ActualBudget",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 15006,
+          "host": 15006,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "ActualBudget",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/ActualBudget/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "ActualBudget (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "57d9b23a8759be56189025269c24aa97372b631cae7f3c31ab3e3ed34e1991c8"
+      },
+      "compose_sha256": "1b0aa742000ee37de26d32d5911352749b9b91e7038f64bb5744b13a556b03c0",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "adminer",
+      "title": "Adminer",
+      "tagline": "Adminer",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Adminer",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Adminer/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Adminer (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "54dc98047f06237654bb23f60521beb0e0d3efea6edae16f9c033f046ccde904"
+      },
+      "compose_sha256": "893415e1af12815935a0fd22fec6b4c288465e1daa0a589f941ba72bdf70f286",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "affine",
+      "title": "Affine",
+      "tagline": "Open source alternative to Notion, Miro, and Airtable",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3010,
+          "host": 3010,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "affine",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "affine/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Affine (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "1787ef35dd1d1c8b7a587f9ec8af9ccf4cc59f63b99642a64ac7fc8795a0fff6"
+      },
+      "compose_sha256": "eabe3bd93df523c62f60b71d10b7d86e985661ac889b5362ee6726775a966dde",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "albyhub",
+      "title": "AlbyHub",
+      "tagline": "AlbyHub",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 58000,
+          "host": 58000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "AlbyHub",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/AlbyHub/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "CC-BY-SA-4.0",
+        "attribution": "AlbyHub (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "1369ece533d9076a84270dddb55d33f0450ff0298dba78ca3ed0d09f2ef82322"
+      },
+      "compose_sha256": "b8e60c67cabc4ca2f9325feb5a4e4b76e3f5da058141954e37640e54d223981f",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "audiobookshelf",
+      "title": "Audiobookshelf",
+      "tagline": "Audiobookshelf",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 13378,
+          "host": 13378,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Audiobookshelf",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Audiobookshelf/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Audiobookshelf (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "3fae39ab7ea11a2d0f909fcc8be3ebac874e6157ff501dfe9ec0c788c64db1f1"
+      },
+      "compose_sha256": "df62ab05b60dfa071e7a03b624caf46a02b12b1c7dda66fe432b80769d17e68a",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "autobrr",
+      "title": "Autobrr",
+      "tagline": "Autobrr",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 7474,
+          "host": 7474,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Autobrr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Autobrr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Autobrr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "436b561b5657a5afa3ec37317685af8352f54cc2069536d7f7b5a2b04e0f8853"
+      },
+      "compose_sha256": "20be04aa9e9fc75a9407aeb483b3c95ad83bf365430d906459e526e1cf265eea",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "bazarr",
+      "title": "Bazarr",
+      "tagline": "Letter generators for Sonarr and Radarr",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 6767,
+          "host": 6767,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Bazarr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Bazarr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Bazarr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "163a17a9db7576001abc0eac2ecd323185ec1add2c0865048a8fe2b9408fd115"
+      },
+      "compose_sha256": "eeeef8ada48d9c1f3185fe40014521af413038c82fbadc51c2964322317e6967",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "bentopdf",
+      "title": "BentoPDF",
+      "tagline": "A Privacy First PDF Toolkit",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "bentopdf",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "bentopdf/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "BentoPDF (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "fdf91106671a123aafd84b8cbbc32bbd227db0513f10d6ffd63039d5e369555f"
+      },
+      "compose_sha256": "1f5ed0df71eace6e044321504ce11219766d5ded3de9e754b0efb8d02ff66e2c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "bitmagnet",
+      "title": "Bitmagnet",
+      "tagline": "Self-hosted BitTorrent indexer and DHT crawler",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3333,
+          "host": 3333,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "bitmagnet",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "bitmagnet/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Bitmagnet (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "bec248950c5535bc7935889f30faa8c54607603535c09c44f69cc04555991663"
+      },
+      "compose_sha256": "8e5b2538a19fcc66a69302e0f21c2206e16046eb94caf0babb3db27b4d98e1d1",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "booklore",
+      "title": "BookLore",
+      "tagline": "An app for managing and reading books",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 6060,
+          "host": 6060,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "booklore",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "booklore/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "BookLore (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "56b84be70bbea846879fef7d798b64da8b5351717a09fff25c269d3154188b23"
+      },
+      "compose_sha256": "a86702050ce31a280dd326978e25cc6c705882f1e5cb6c4c00dd7b15da7b6cad",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "calibre-web",
+      "title": "Calibre-web",
+      "tagline": "Web app for browsing, reading and downloading eBooks stored in a Calibre database",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8083,
+          "host": 8083,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Calibre-web",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Calibre-web/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Calibre-web (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "0ba8aa11633b7d6f3ebf6ea6c224c6b5e94d8a09ad61f0a8fda063b9dc896985"
+      },
+      "compose_sha256": "cbe446d822a859504e512526f625298dfc59810cb6b9ac4e022fc5395913523f",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "campfire",
+      "title": "Campfire",
+      "tagline": "Self-hosted chat for teams",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "campfire",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "campfire/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Campfire (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "655cdb77994ab9abfc4f89c9ac6174c11fb3c9c34230c1dbd82402dbdab90b7f"
+      },
+      "compose_sha256": "ada7d36d1665b0f57d9365ba5b4c47409d09549f9a41fd2b08fad36b5f9bdc5a",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "chatbot-ui",
+      "title": "ChatBot UI",
+      "tagline": "ChatGPT but better",
+      "category": "AI & ML",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "chatbot-ui",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "chatbot-ui/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "ChatBot UI (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "c8e7e9aecdedf4256f7ed1682c46f067a49eb469dddb0602b912e321856f388b"
+      },
+      "compose_sha256": "26ea65265c3f285bb987bc0dd0a3a56c1b6b2ecc6058bcce1875f2f188e7cba7",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "chatbotui",
+      "title": "ChatbotUI",
+      "tagline": "ChatbotUI",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3080,
+          "host": 3080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "ChatbotUI",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/ChatbotUI/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "CC-BY-SA-4.0",
+        "attribution": "ChatbotUI (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "d2cb31b1010cab0fd843589cb6da83bf1cb325997d9b720e28b31825bf54ef9e"
+      },
+      "compose_sha256": "3d7be75e9131b0c6f5485ac1c5bd8bef0b01612f72004c8736045c12ff5d69de",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "chatpad-ai",
+      "title": "Chatpad AI",
+      "tagline": "Premium quality UI for ChatGPT",
+      "category": "AI & ML",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "chatpad-ai",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "chatpad-ai/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Chatpad AI (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "2201ba5225b0108fde150a233c035981d2f4af91f98f44c61ce47cd52e8fbd15"
+      },
+      "compose_sha256": "6e6141fe09bed1c4b896f054e72ba5976fff9b4944a3a345664be64a58e6cc19",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "chromium",
+      "title": "Chromium",
+      "tagline": "The open-source browser project",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "chromium",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "chromium/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Chromium (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "612618274b9ddf34a1f475ca3e4667786d9d2a9ab055a2faf061ce8e6524d451"
+      },
+      "compose_sha256": "bfcc58ab4eca82ba3ef7e49a5b29e0124e8c0188e7463c1c4b46005f368a4251",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "code-server",
+      "title": "code-server",
+      "tagline": "Run VS Code on your Umbrel",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "code-server",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "code-server/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "code-server (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "f54ec79a119e7c0fcb3dc182680691b75b9bd5a3b0c400a107cabab950301d31"
+      },
+      "compose_sha256": "e3a9dea8c6513ca132ac55dd07b7955a77de8a10d2a8578ff29a8aca29339e14",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "copyparty",
+      "title": "copyparty",
+      "tagline": "A versatile all-in-one file server for everything",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3923,
+          "host": 3923,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "copyparty",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "copyparty/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "copyparty (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "4e8568fffd043b9d678cc211de46df78050205228baf4eb39f1408d531fa112d"
+      },
+      "compose_sha256": "bcd7b607134f66c7e4f896ebb8643e50eb157ec41f5e348fb1e0d1d6a4eeedb0",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "crafty",
+      "title": "Crafty",
+      "tagline": "Take control of your Minecraft servers.",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8111,
+          "host": 8111,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Crafty",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Crafty/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Crafty (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "117ad27dcf8e4f201ab7a5cf6ca7c4bcd414ff7826b0de0ef1f649bd418f954c"
+      },
+      "compose_sha256": "7a299bc2a785790a586d8796a21d82bf37436ece8a98fefb574a35da42769e22",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "dcrpulse",
+      "title": "Decred Pulse",
+      "tagline": "Full Decred node with watch-only wallet and database-free block explorer",
+      "category": "Finance",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8735,
+          "host": 8735,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "dcrpulse",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "dcrpulse/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Decred Pulse (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "3efc51956d2ab4a7dc79e4c5ffb9f971ddcb1de2e84e15aeaf1924f04f1c52a6"
+      },
+      "compose_sha256": "be72b83ce2ddda20e92d1e0a12757eebf8c4bafcd7820906774b3d28beed02a8",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "deepsea",
+      "title": "DeepSea Dashboard",
+      "tagline": "Retro style Ocean dashboard",
+      "category": "Finance",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "deepsea",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "deepsea/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "DeepSea Dashboard (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "803bd006b24339ec156d3613ef80216b7330395c2bcc33b2dac111cfee1196f5"
+      },
+      "compose_sha256": "d0d046a197c3230ebc9355c0c9ab2c0f8837fb6398dcb6be3ccbf62b95da68ba",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "deluge",
+      "title": "Deluge",
+      "tagline": "A lightweight and free BitTorrent client.",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8112,
+          "host": 8112,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Deluge",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Deluge/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Deluge (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "4c90adc1929830671965fbe55fc35761d6264b97f49acc2aed608ea1ef4f791e"
+      },
+      "compose_sha256": "206ec6df40639c395ff5ef860fd9ef204ce91b485948698d4420a1db4437131b",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "downtify",
+      "title": "Downtify",
+      "tagline": "Downtify",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8582,
+          "host": 8582,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Downtify",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Downtify/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Downtify (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "4599be1b830051912a6a782d614dd67b512f4040f6c7c5950a649aba487b0f52"
+      },
+      "compose_sha256": "f3d7fa7760016d9162a0e8b029871ef2a51a4af79dc0230047b523dfe73dc3af",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "duplicati",
+      "title": "Duplicati",
+      "tagline": "Store securely encrypted backups in the cloud!",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8200,
+          "host": 8200,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Duplicati",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Duplicati/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Duplicati (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "9e65fc07a5e718d4225aa5689dafd6d4fcbfc649595ec90465c616da4067a707"
+      },
+      "compose_sha256": "83ed82b5d749792fabde41cae5bf3e26eb29887e2461bdb41ad04c608d192117",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "element",
+      "title": "Element",
+      "tagline": "A glossy Matrix client compatible with Synapse",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "element",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "element/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Element (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "34728f19a6b187f0e47facb5a9e2af001010c357bbddec8a342d285d3eddf67b"
+      },
+      "compose_sha256": "07af89edf3ade3bbaa7c6ee7f6f76c95393563796efd99b525f2b4b1ffe1349f",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "emby",
+      "title": "Emby",
+      "tagline": "TAKE YOUR MEDIA ANYWHERE WITH EMBY",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8096,
+          "host": 8096,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Emby",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Emby/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Emby (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "29db5aae225a549156e17719b23e1d3605e8a7e3f883784f8494bb702d5a8ca5"
+      },
+      "compose_sha256": "eea659ff85b3264289f030d6a16440071e83d53fc0182d3e6904df4c9cf56e74",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "emby-nvidia",
+      "title": "Emby_Nvidia",
+      "tagline": "Emby_Nvidia",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8096,
+          "host": 8096,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Emby_Nvidia",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Emby_Nvidia/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "CC-BY-SA-4.0",
+        "attribution": "Emby_Nvidia (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "b77c579e03799e2b87e4e2ac11d5537d493e121f88ff7a18c8bfa012391449dd"
+      },
+      "compose_sha256": "b8c5ba71ec156f8f45d64310a77cc8bc9b31c497ac88d9502aca2eeeccaaf68e",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "embystat",
+      "title": "Embystat",
+      "tagline": "Calculate all kinds of statistics from your (local) Emby or Jellyfin server",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 6555,
+          "host": 6555,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Embystat",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Embystat/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Embystat (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "0d8fec4cef24fcb14209a5e2cd42191045fdb0f952c84ac4d32fffcb90dc8bfb"
+      },
+      "compose_sha256": "ff2ddc51ee30e1454328f2e16b9066ed4ed00b975c1ddb44ec5a2cdadbcabacf",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "enclosed",
+      "title": "Enclosed",
+      "tagline": "Send private and secure notes",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8787,
+          "host": 8787,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "enclosed",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "enclosed/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Enclosed (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "0d4bcffecf1592241cf1296583240266f41554110433f60108bc168f9cc7dc41"
+      },
+      "compose_sha256": "25b5e6b3c6e1aa5e592dc383e9fd28222a74aec1328bcd1e0b4c60547648a692",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "file-drop",
+      "title": "File Drop",
+      "tagline": "Decentralized, Anonymous, and Secure File Sharing",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3232,
+          "host": 3232,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "file-drop",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "file-drop/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "File Drop (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "c396ceae965738d19d44a1a29290e5a21065b574244c8dad9f02f905f2da2829"
+      },
+      "compose_sha256": "7a51c7e4e1c01f43cbb59123e88a621aab5ab49b62e755a12d1a49dda7c3d2d3",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "firefox",
+      "title": "Firefox",
+      "tagline": "Firefox is a free and open-source web browser",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "firefox",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "firefox/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Firefox (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "b1888d8ab88c403773fa2e8609ae28a8bae47b425ae9b8316fcb5f50ef7771ff"
+      },
+      "compose_sha256": "812569900241ec9e092f7fbd8f820b7d701ee6d4b2d90064c6f3c39a8d25fd22",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "fizzy",
+      "title": "Fizzy",
+      "tagline": "Kanban as it should be. Not as it has been.",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "fizzy",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "fizzy/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Fizzy (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "8a180c374bccd98cf02af907411f872988a8f45bdb70d99300014f81e7053e3d"
+      },
+      "compose_sha256": "e0e146ffaeac3b8aadac898973094e7170f1d8ad2e53be699ce35553a3184efc",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "flaresolverr",
+      "title": "FlareSolverr",
+      "tagline": "FlareSolverr",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8191,
+          "host": 8191,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "FlareSolverr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/FlareSolverr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "FlareSolverr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "d9e46d383aaa30a3d85cd688d67e122d0bb0f776b31ea525baeaebe8062e97d9"
+      },
+      "compose_sha256": "ce82c76b0f020c51e26c84389853ea38d422fe2ddc1fba6de51a64222022646c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "freshrss",
+      "title": "FreshRSS",
+      "tagline": "A free, self-hostable aggregator for rss feeds",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "freshrss",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "freshrss/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "FreshRSS (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "f7bc224c69555ad25ee5bcc81a08933118905ec697da6504ec5e1d19aa5e5bae"
+      },
+      "compose_sha256": "68f220a9827e3a0d653824104dc16249b041f4b79442c55040d0eb4884dbafb5",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "ghost",
+      "title": "Ghost",
+      "tagline": "A platform for creators to publish, grow, and monetize their content",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 2368,
+          "host": 2368,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "ghost",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "ghost/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Ghost (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "6540a60a135065e03ecb182aafddbf23f5de801ac0ca8528a1ca3b29f0329826"
+      },
+      "compose_sha256": "98cc00df41f70e7295af8842153c30a87259e7e5f03124bc8d382481798fab63",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "grafana",
+      "title": "Grafana",
+      "tagline": "Grafana is a complete observability stack that allows you to monitor and analyze metrics, logs and traces. It allows you to query, visualize, alert on and understand your data no matter where it is stored.",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3003,
+          "host": 3003,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Grafana",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Grafana/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Grafana (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "444e313ee56b69ced85bd3ce49e68353ae853d868925f43f79b050375ba5a933"
+      },
+      "compose_sha256": "21b58f434a4ef3b2ccc08b87c9319b2170088cde98653ac509b2555d4f99f88b",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "heimdall",
+      "title": "Heimdall",
+      "tagline": "Organize your most used web sites in a simple way",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "heimdall",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "heimdall/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Heimdall (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "3fc6a038d7a09b6c682eeb0872bd579647e3c49d8d16ea8a4087d2f6aef83a40"
+      },
+      "compose_sha256": "9485220d695d877e4f1cd19e321dcc44893d84155f94ff26c7a248e395d4ef1c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "homarr",
+      "title": "Homarr",
+      "tagline": "A customizable browser home page",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 7575,
+          "host": 7575,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "homarr",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "homarr/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Homarr (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "eec1922d36d06364efe441eb5e07707128d36bca36066dde620c10d73e497edc"
+      },
+      "compose_sha256": "eb674e547a6fbd8153689b5158b2c0486ecb9fb4473d7773e6c47a478a634d39",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "homebox",
+      "title": "HomeBox",
+      "tagline": "An inventory and organization system built for the home user",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 7745,
+          "host": 7745,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "homebox",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "homebox/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "HomeBox (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "1b3c70d83245ae95780313815e6cf6cb0b5fede7d9a4d972ef22a69e07501e81"
+      },
+      "compose_sha256": "794f7d2a0159d5adfe0cded9fa2929ae0f95b77589bd937b26eb707f88356a93",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "homehub",
+      "title": "HomeHub",
+      "tagline": "A modern hub for family organization",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5000,
+          "host": 5000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "homehub",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "homehub/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "HomeHub (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "263a18121a3c1584eeee0f352a28c8fe29c7900d916b50ec24140da966c7724a"
+      },
+      "compose_sha256": "203cc3fc8e6fe069aa0a0666369818206fb04511c72b9ed209e2a06778bd198d",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "hortusfox",
+      "title": "HortusFox",
+      "tagline": "A collaborative plant tracking and management application",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "hortusfox",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "hortusfox/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "HortusFox (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "1c7e5224d5390c0e401474342b88ed8aa610580bf35d6fb56d0642138c69361c"
+      },
+      "compose_sha256": "c1bb429672ea784e1076413d64c230e9fb6c490e43cd1ad159cdf2cdaa59d4d6",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "hugo",
+      "title": "Hugo",
+      "tagline": "Hugo",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 1313,
+          "host": 1313,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Hugo",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Hugo/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Hugo (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "8e292d39cf7d230cc98bba9067cb45f368641a62f3c71611ebf8c5b75ff5d95d"
+      },
+      "compose_sha256": "494d23f1a9828e024df327c382c28d0a4a4ec025eed6440ae990b28d4841b170",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "influxdb2",
+      "title": "InfluxDB 2",
+      "tagline": "The leading platform for time series data",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8086,
+          "host": 8086,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "influxdb2",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "influxdb2/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "InfluxDB 2 (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "25620461e5b14c868d011f4d4c3670b1d97be0a3ed0857d625975c6f8a6ace9b"
+      },
+      "compose_sha256": "f51a370a30886f4d070bc6c1a0aac6cf3b01531dbcee42442e8880efb92fa99b",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "invio",
+      "title": "Invio",
+      "tagline": "Invio is a self-hosted invoicing app without the bloat",
+      "category": "Finance",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "invio",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "invio/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Invio (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "e9ba699305858bacc6028eeb35be5be135ccf38415ef4911e97742b196207a8f"
+      },
+      "compose_sha256": "be47dc982246e252ea882e5dfd76b147ec6cb1ff26ca98d292cf874739d9246f",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "ittools",
+      "title": "IT-Tools",
+      "tagline": "An array of handy online tools for developers",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "ittools",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "ittools/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "IT-Tools (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "f10e85f35e2aa677faac68660d9bc82427e34f74885d83ccc8b3802f04e68dae"
+      },
+      "compose_sha256": "7323be8a442cadf90c0aae8882ebe08339377f9d22a794ae57c4708387b68fc5",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "jackett",
+      "title": "Jackett",
+      "tagline": "Jackett works as a proxy server",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 9117,
+          "host": 9117,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Jackett",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Jackett/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Jackett (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "43c12363212601a9c3fbb6bba4d102712968bc2060b0ec023d6542a39d39a03f"
+      },
+      "compose_sha256": "a3eff46b863fab3689a65f3c84dc36dfaf1a376abd854e44f6315cad638539a2",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "jellyfin",
+      "title": "Jellyfin",
+      "tagline": "Puts you in control of your media.",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8097,
+          "host": 8097,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Jellyfin",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Jellyfin/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Jellyfin (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "8b53e524e3761d798aa8ae4b04fa54c039cc7b848e1591907191debf3d583e2a"
+      },
+      "compose_sha256": "a938a61bf42753059c253bd890de1484e387544917989393d503b0288f3a5845",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "jellyfin-nvidia",
+      "title": "Jellyfin_Nvidia",
+      "tagline": "Jellyfin_Nvidia",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8097,
+          "host": 8097,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Jellyfin_Nvidia",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Jellyfin_Nvidia/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "CC-BY-SA-4.0",
+        "attribution": "Jellyfin_Nvidia (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "8f5a11a7e9461b56cc1f00d7b0b1cad6706307dfa3f5b5ff1b73188116cf7104"
+      },
+      "compose_sha256": "7d2cd82bc902cf89ae3321b80768f357acfa1013166243a698fa6e5b6a164f28",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "jotty",
+      "title": "Jotty",
+      "tagline": "A simple app, for your checklists and notes",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "jotty",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "jotty/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Jotty (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "e6fa1ceb16949b9472baa454eed88fca8cbbc6321c2a4c9de9f04bb2d19813e2"
+      },
+      "compose_sha256": "068df0b1f6c5ff6f8e0be6f454a78ef4db763f9ea68451fe8bedff38f855307c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "jupyterlab",
+      "title": "JupyterLab",
+      "tagline": "Next-generation web interface for interactive computing and data science",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8888,
+          "host": 8888,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "jupyterlab",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "jupyterlab/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "JupyterLab (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "8a42ec37d2ee3ff98124d6aedaadae68610e4fd9ff76b02080903963657127cc"
+      },
+      "compose_sha256": "49d7ae65e9c471f52fc9c5189b73e7adb5901994ed6c40ecb193a4a4cdcecd7a",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "kan",
+      "title": "kan",
+      "tagline": "The open source Trello alternative",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "kan",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "kan/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "kan (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "3a71478756eefe81384ad3ec0f58d9b21dc94396d163d5ce1c1e543a4df554cd"
+      },
+      "compose_sha256": "41bacef4117e98064c1ba12fadb97f652f10cce2f46a287fd7725fd696bffd23",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "kiwix",
+      "title": "Kiwix",
+      "tagline": "Access knowledge anytime, anywhere without an internet connection",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "kiwix",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "kiwix/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Kiwix (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "559acd2c9845cee314fbb33a7950f06c9c6ebe4dfeeb521aba05a7d37b77644c"
+      },
+      "compose_sha256": "c022aa79afe05f997c8d273b307990e16bef254abeace0f6d63e3ec86312c747",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "kokoro",
+      "title": "Kokoro",
+      "tagline": "An intelligent, high-quality TTS solution",
+      "category": "AI & ML",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8880,
+          "host": 8880,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "kokoro",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "kokoro/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Kokoro (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "ee672ecd9c42ade099fe9b2d147a7fc276c25562d2a0751e77ee8b1fb971c8e4"
+      },
+      "compose_sha256": "c2690b3c4e534669f1b4d4462739231a766a35cf20f7ac505177845aae84cc20",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "lazylibrarian",
+      "title": "Lazylibrarian",
+      "tagline": "eBook Auto Downloader",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5299,
+          "host": 5299,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Lazylibrarian",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Lazylibrarian/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Lazylibrarian (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "d42b8e3a287e5b02441aabe95b55eefea2498de927e11903d77a6972e13b8494"
+      },
+      "compose_sha256": "51aad3b08bf16b4e9ffc3d4972740b3707291819ad1cc6ed29c90702073ed277",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "libreoffice",
+      "title": "LibreOffice",
+      "tagline": "Do more - easier, quicker, smarter",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "libreoffice",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "libreoffice/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "LibreOffice (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "b4115a4b44e1b830a1661a9f17d146fdc791c99b3892706ad21243a33949c25e"
+      },
+      "compose_sha256": "3784854c0bbbb8746292563ebfbcb984f8356de313f3e12175966c35ea0713eb",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "lidarr",
+      "title": "Lidarr",
+      "tagline": "Music collection manager for Usenet and BitTorrent users",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8686,
+          "host": 8686,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Lidarr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Lidarr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Lidarr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "b26a8ce9bf79e7415ab40b426eb21ddbed67a158169d2b82dc22d71957a61120"
+      },
+      "compose_sha256": "58cd732be46e336b06a9fa85775179f890a0aad5cadf5934040d57c1d706f4a5",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "linkwarden",
+      "title": "Linkwarden",
+      "tagline": "Linkwarden",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3428,
+          "host": 3428,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Linkwarden",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Linkwarden/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Linkwarden (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "348a74061ce407bf1dee41ebc74b2b48cbca7060a807556e15147ba380afb68e"
+      },
+      "compose_sha256": "5d15222b34f8be981d803faf59712d833c074db2ebb47d417ebdee3f069ded6c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "lubelogger",
+      "title": "LubeLogger",
+      "tagline": "A vehicle maintenance and fuel mileage tracker",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "lubelogger",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "lubelogger/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "LubeLogger (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "75f1e45db63fd9f19efa8928fa359fc3b52fecb051f4f2083895f9afe86ed95b"
+      },
+      "compose_sha256": "3a84ae47ec26bd18f8a08eda82edef4c4986386352b4e6cd837f3a410274def1",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mailarchiver",
+      "title": "Mail Archiver",
+      "tagline": "A comprehensive solution for archiving, searching, and exporting emails",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5000,
+          "host": 5000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "mailarchiver",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "mailarchiver/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Mail Archiver (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "f5f77113d972937d4113f6f4377c4ebfc1c222cbac69d9b98c6ae8139104cbde"
+      },
+      "compose_sha256": "0c59d7d5d0b2825ec680f809ebebdaac14b2b5ac6d19ec00a011ed9bb999e133",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mainsail",
+      "title": "Mainsail",
+      "tagline": "Control and monitor your printer from everywhere, from any device",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "mainsail",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "mainsail/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Mainsail (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "3605240da369aa06939afbd01eca35c0cb6a9ba3545c60c549bd3ab534484d19"
+      },
+      "compose_sha256": "72d142b6b58204f2e29165afb091c230d0ca8a9199fab4bfa15d469b72e1d904",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mariadb",
+      "title": "MariaDB",
+      "tagline": "MariaDB",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3306,
+          "host": 3306,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "MariaDB",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/MariaDB/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "MariaDB (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "b4dfac5e11e3559bae1a0a32e0e67f14cdc413af523b25b7559bbea72bdb24d4"
+      },
+      "compose_sha256": "c345699660c105f2d66a965333765c77424e1e37c2705cf9d43c5a3effb6607e",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mazanoke",
+      "title": "Mazanoke",
+      "tagline": "A self-hosted local image optimizer",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "mazanoke",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "mazanoke/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Mazanoke (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "30a65ddd980aa0ce7369786113bf7740f386af4c1ad5d37e98e5d87c06f94425"
+      },
+      "compose_sha256": "5ae6e291343b9e8eaaf17766ab9560a3a6c155e22095f5a45b0121d66ec6aaa6",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mealie",
+      "title": "Mealie",
+      "tagline": "A Place for All Your Recipes",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 9000,
+          "host": 9000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "mealie",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "mealie/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Mealie (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "68e13bcc86f56b252008b3e93e1320d3362ed076ffa67ea130e6b5391fb31b66"
+      },
+      "compose_sha256": "5379744d688eb78a1461eafbc9ae3cfff51b2f40b030cabfaf26bd50456d2ec6",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "memos",
+      "title": "Memos",
+      "tagline": "Memos",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5230,
+          "host": 5230,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Memos",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Memos/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Memos (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "9ffa20d34d2241a3c8d559ae4a8b18589ac8a5b5806852ee239a2c441534f201"
+      },
+      "compose_sha256": "7a63eae7fc1112929529ca3f173dc2935179454d50d27a1aa4b891318fa8d1f5",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "meshchatx",
+      "title": "MeshChatX",
+      "tagline": "The future of off-grid communication. Secure, decentralized, and unstoppable",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "meshchatx",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "meshchatx/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "MeshChatX (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "b8ab9048e0e6fc9731d85bce60d57b0cf856c9a63c175143164dec12db2aaa16"
+      },
+      "compose_sha256": "2d022bf91e013f59641c14fc53643e4a249ce7045ea5917ad3deb384fcac7fac",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "metube",
+      "title": "MeTube",
+      "tagline": "Download videos from YouTube",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8081,
+          "host": 8081,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "metube",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "metube/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "MeTube (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "3d0b345e1a33fed882d19a0aa9d54b4f60a77179680267c23141828697b41f09"
+      },
+      "compose_sha256": "29df9f154334c51b9f571702e354475c5aa734204ea5e173b09262516296ba58",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "minio",
+      "title": "MinIO",
+      "tagline": "The Object Store for AI Data Infrastructure",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 9001,
+          "host": 9010,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "minio",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "minio/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "MinIO (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "5ee0b0a3f82f6bfc6107458150266fdc0c48af2300bfc4c55a34705b9975f2dd"
+      },
+      "compose_sha256": "40d246f3c7c22fa08f1474bcc9165626ab038f9c856847d2b1964902a3d50cf0",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "monetr",
+      "title": "Monetr",
+      "tagline": "A budgeting application focused on planning for recurring expenses",
+      "category": "Finance",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 4000,
+          "host": 4000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "monetr",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "monetr/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Monetr (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "229b5d110fde28f0cabf76d9bc6cb7eae114b8b30de2cea69478bf9a5581ff19"
+      },
+      "compose_sha256": "8af3edc01fecf6bd7bd0f01d64a1229f047038427316f052ccc539528307d2c6",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mongo",
+      "title": "Mongo",
+      "tagline": "Mongo",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 27017,
+          "host": 27017,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Mongo",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Mongo/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Mongo (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "c3ef11b58c1ce188cb2cf8f35e96e0fa2bcdbe3b26a04dec165080ec2bc5c9a9"
+      },
+      "compose_sha256": "fd1d95610964b9f96413b4f4d7864762271322ab9b265d0c8d4745400c9ace74",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mongodb4",
+      "title": "MongoDB4",
+      "tagline": "MongoDB4",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 27017,
+          "host": 27017,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "MongoDB4",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/MongoDB4/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "MongoDB4 (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "c3ef11b58c1ce188cb2cf8f35e96e0fa2bcdbe3b26a04dec165080ec2bc5c9a9"
+      },
+      "compose_sha256": "d60b14ce2114828bb31314c643ba14c1962da1fc4c054a08ca856dc90986313a",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "morphos",
+      "title": "Morphos server",
+      "tagline": "Self-hosted file converter",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "morphos",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "morphos/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Morphos server (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "d72cef9c5fe72dd8e8f385b88c282249eb1d603993cf1a4e422c33d7345d8352"
+      },
+      "compose_sha256": "729a2b09f2ca4ae54d4cdc33c2e3310fbf1954a329b303b733aa32865de6851d",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mqttx-web",
+      "title": "MQTTX Web",
+      "tagline": "Your All-in-One MQTT Client Toolbox",
+      "category": "Smart home",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "mqttx-web",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "mqttx-web/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "MQTTX Web (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "076aad835a2541cac784b61986b559f9306ca5de499569c6a6321905ca9aefd4"
+      },
+      "compose_sha256": "aca9e5d77da813aca33624a2b3eddc0d547e944e78b17030b4090c26eda1887f",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mstream",
+      "title": "mStream",
+      "tagline": "A private music server",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "mstream",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "mstream/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "mStream (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "5b150185dfc1109d787798761a3772a45f8e4a9fbad3a9a6a021a194ad3c307f"
+      },
+      "compose_sha256": "eb62b17920997976c5d6628775858848abb8f1d35d8bc8bb501a108478d12f58",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "mylar3",
+      "title": "Mylar3",
+      "tagline": "Automatic comic book (cbr/cbz) downloader",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8090,
+          "host": 8090,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Mylar3",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Mylar3/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Mylar3 (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "8c3087bc21176c43899255b0ae675e28c63e1ec0bb1a42d0618555a8fe0750cb"
+      },
+      "compose_sha256": "44588e2565debca205c25427561a172f259b2235b6f4937858cd1fe8d79eeb7e",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "n8n",
+      "title": "n8n",
+      "tagline": "Workflow automation tool",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5678,
+          "host": 5678,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "N8n",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/N8n/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "n8n (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "82690fb33c31468b39e2fa19fa6cc4e302090d9026e8733d647253a52b616502"
+      },
+      "compose_sha256": "216f88209736605808fdc3cd9cc28aa6bd70cfdfbbd4bb3613fb620fb53cd4db",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "navidrome",
+      "title": "Navidrome",
+      "tagline": "Navidrome",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 4533,
+          "host": 4533,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Navidrome",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Navidrome/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Navidrome (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "7cad01b3f77bb909f53829af36be159815520ed3f1ca074c810f44dc22908405"
+      },
+      "compose_sha256": "a8d5e02f8052d36abcec19f4476ba149ee70b291ffd494575a1a9bc5eb608375",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "neko",
+      "title": "Neko",
+      "tagline": "A self-hosted virtual browser powered by WebRTC",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "neko",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "neko/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Neko (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "9c43d68959dac16eb0a23987503c2d3693923df8e362f6e5837ee11c949b5cf8"
+      },
+      "compose_sha256": "d56f8ab719718b30a25ca847ce6d4be92cb9173d4158cf5b864f9b7a743ba17e",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "networkingtoolbox",
+      "title": "Networking Toolbox",
+      "tagline": "The all-in-one offline-first networking toolbox for sysadmins",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "networkingtoolbox",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "networkingtoolbox/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Networking Toolbox (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "67429ebec3a83f1efb193e032ac1b9fd9e6d187ce986bf283c7b2a5485093271"
+      },
+      "compose_sha256": "4b64a4eb5d1a41612768a4fad4a435d0c040546cf7caa45a5f7447b76040f8ea",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "nocodb",
+      "title": "NocoDB",
+      "tagline": "No-code platform for database management, self-hosted Airtable alternative",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "nocodb",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "nocodb/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "NocoDB (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "138f1189212291857b5085310dfca981d8b5c90bcc6a89f1f068588968f8f51e"
+      },
+      "compose_sha256": "7a667dcc99f5d18cb4d6dd131131ee9e297606fcd5531f0859f3123fca9ff6c5",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "nostrudel",
+      "title": "noStrudel",
+      "tagline": "A sandbox for exploring nostr",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "nostrudel",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "nostrudel/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "noStrudel (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "ca161f678457b849ca464196615a4f9103779cbe6837948f4078e14871f8e983"
+      },
+      "compose_sha256": "3a707b52db00a78eb50afbc818ab620ffcd4d5d673592ac25249ec0b69876c04",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "nutstash-wallet",
+      "title": "Nutstash Wallet",
+      "tagline": "Nutstash is a Cashu wallet for your browser",
+      "category": "Finance",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "nutstash-wallet",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "nutstash-wallet/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Nutstash Wallet (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "776cd25f684212acea6179022910614dc09f7de9d83a7bb467c80bdaac2e95bb"
+      },
+      "compose_sha256": "8f0c7da088cbbf13457b10d7e701689dd0bd618cc7b7c8fdeaf100d1b9ab2785",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "nzbget",
+      "title": "Nzbget",
+      "tagline": "Efficient Usenet downloader",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 6789,
+          "host": 6789,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Nzbget",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Nzbget/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Nzbget (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "04d4c4ee893c55e3bf1e52042a3263c7265ebdab0cb4899ce9de6455b5dee986"
+      },
+      "compose_sha256": "678bd97a36104799fe350937966f7ee27131b8b5818e048a2847a9dea7365294",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "obsidian",
+      "title": "Obsidian",
+      "tagline": "Obsidian",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 15323,
+          "host": 15323,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Obsidian",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Obsidian/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Obsidian (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "5f527332bb06af78ab7926347b7b60ca3b38054451701c0451b34b1d5610f131"
+      },
+      "compose_sha256": "eeff6c240d075510baff7b1ced6cf366cf6637bee4201a6122a899da8b261b81",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "ollama-amd",
+      "title": "Ollama (AMD GPU / ROCm)",
+      "tagline": "Run LLMs locally with AMD ROCm acceleration (Linux only)",
+      "category": "AI & ML",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 11434,
+          "host": 11434,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "powerlab-authored",
+        "upstream_id": "ollama",
+        "upstream_repo": "https://github.com/ollama/ollama",
+        "upstream_path": "hand-authored",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T00:00:00Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Ollama (AMD GPU / ROCm)",
+        "sha256": "1e7f23086c8f93d409a8cf0e489a4eeae80bbdc91aa38e8eda3cbb3578928cf2"
+      },
+      "compose_sha256": "f438087f0a07ff746f6102dd30dec28efe481dce9d9065912a5236395e530a1c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "ollama-cpu",
+      "title": "Ollama (CPU)",
+      "tagline": "Run large language models locally \u2014 CPU, works on any host",
+      "category": "AI & ML",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 11434,
+          "host": 11434,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "powerlab-authored",
+        "upstream_id": "ollama",
+        "upstream_repo": "https://github.com/ollama/ollama",
+        "upstream_path": "hand-authored",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T00:00:00Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Ollama (CPU)",
+        "sha256": "1e7f23086c8f93d409a8cf0e489a4eeae80bbdc91aa38e8eda3cbb3578928cf2"
+      },
+      "compose_sha256": "efceef6af5b98fb65783eff7b77e6562e01934d7dddba98505149777c608c307",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "ollama-nvidia",
+      "title": "Ollama (NVIDIA GPU)",
+      "tagline": "Run LLMs locally with NVIDIA acceleration (Linux + CUDA only)",
+      "category": "AI & ML",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 11434,
+          "host": 11434,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "powerlab-authored",
+        "upstream_id": "ollama",
+        "upstream_repo": "https://github.com/ollama/ollama",
+        "upstream_path": "hand-authored",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T00:00:00Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Ollama (NVIDIA GPU)",
+        "sha256": "1e7f23086c8f93d409a8cf0e489a4eeae80bbdc91aa38e8eda3cbb3578928cf2"
+      },
+      "compose_sha256": "fc3b10c4acee8b98f8bbd2274bc378402a3c2fe6c936e1c877a44393e532804d",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "ombi",
+      "title": "Ombi",
+      "tagline": "Friendly media request tool, automatically syncs with your media servers!",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3579,
+          "host": 3579,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Ombi",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Ombi/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Ombi (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "a4bb898dba5612c194889c193c42de7ecd85e0c602c739aa5d72c2d2731224a7"
+      },
+      "compose_sha256": "25c0df952425e496f54b05ebb0e8e02aba5beb68eb1b0b7e063fad0247fee0f8",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "opencode",
+      "title": "OpenCode",
+      "tagline": "The open source AI coding agent",
+      "category": "AI & ML",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 4096,
+          "host": 4096,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "opencode",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "opencode/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "OpenCode (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "9870145260287b3f1fd6ed244bb78a6d54fd5e0afab2d286dee5290ab5753fe5"
+      },
+      "compose_sha256": "f01145dc7afc10d21a7def3c3580fe52db4fd76b04bf663bc0267f6e78eb3cd7",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "overseerr",
+      "title": "Overseerr",
+      "tagline": "Overseerr",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5055,
+          "host": 5055,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Overseerr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Overseerr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Overseerr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "7c6c87ff256dc084357709b56bddde560fac35a08e6a3c00a078685b84616d79"
+      },
+      "compose_sha256": "da34b604b70a4a775b6123dc3b8383156dd4712e5ce66bbec0f3265b9ebfe6e0",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "papra",
+      "title": "Papra",
+      "tagline": "The minimalistic document archiving platform",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 1221,
+          "host": 1221,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "papra",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "papra/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Papra (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "b72616068dafb480ebc8b4a6e279655b1fdbf0bc4c5db7e236f98f16eafea911"
+      },
+      "compose_sha256": "6634c3835ea1c461183d111eecef255147588a523a7d0ade46727f90cc274860",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "petio",
+      "title": "Petio",
+      "tagline": "Petio",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 7777,
+          "host": 7777,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Petio",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Petio/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Petio (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "d59228747d2024e11d12e2c5e012d0a0c1fadff1885c12d01d1f7e4574044676"
+      },
+      "compose_sha256": "eedb285d2c0296fe6b5f7b06ffb760f467c22f31f4f51cac2ebac1c53f4598e1",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "photoprism",
+      "title": "PhotoPrism",
+      "tagline": "Browsing, organizing & sharing your photo collection",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 2342,
+          "host": 2342,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "PhotoPrism",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/PhotoPrism/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "PhotoPrism (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "602a0cd1c000564769d4596e7d53aa1aff55ae55abf23edf01dc059f842d48bf"
+      },
+      "compose_sha256": "6587d4af2054d59f5f8e0fd2cfe7afc98127dd919f1fa8d941dd71e030d14b96",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "picsur",
+      "title": "Picsur",
+      "tagline": "An easy to use image sharing service",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8286,
+          "host": 8286,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "picsur",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "picsur/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Picsur (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "4a188417288a88be27c01eb37ebab3f25ac70f84a8697f26de13635c7746c1e9"
+      },
+      "compose_sha256": "0932aa5359e62528822da2594aaf7b2a34a09ab48e6c29ca104ee90fcb7e5609",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "pocketbase",
+      "title": "PocketBase",
+      "tagline": "Open Source backend for your next SaaS and Mobile app in 1 file",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8090,
+          "host": 8090,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "pocketbase",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "pocketbase/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "PocketBase (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "1e822bf0477a896816509a1d49c6f2086d089530afde8fa23194bd94091525c0"
+      },
+      "compose_sha256": "c1cbd1f05fde77bf6742f1e88e2b7bfa3436a9aed9a91eff96f4724be55d2569",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "postgresql",
+      "title": "PostgreSQL",
+      "tagline": "PostgreSQL",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5432,
+          "host": 5432,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "PostgreSQL",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/PostgreSQL/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "PostgreSQL (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "6708e45ba28d9fd2cb9a741393d6e54c4c417c4f10c11920b10bd346657ff030"
+      },
+      "compose_sha256": "6c126f813ff391cef38fe40e477d33ff3e932f3b096e1dbf4f670ee467c7e291",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "poznote",
+      "title": "Poznote",
+      "tagline": "A powerful app for taking notes",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 9300,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "poznote",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "poznote/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Poznote (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "b76b70abde15882c569b07141282ca6a4dc49ee0c3e605c58bd3ce1987b654d6"
+      },
+      "compose_sha256": "f834e561e1da40bc6f45262a46869fcce0c61f866c88824fc8cf6688ce365425",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "prowlarr",
+      "title": "Prowlarr",
+      "tagline": "Integration of various PVR applications",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 9696,
+          "host": 9696,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Prowlarr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Prowlarr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Prowlarr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "542bee48e6ef299d5a351344ede1f15dece42ee9df38f9fba6a97d966c53c377"
+      },
+      "compose_sha256": "ea8b18b1c21506190d83537e6568242fba64c1d9285e61295b345d8a29ce5b30",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "pyload",
+      "title": "PyLoad",
+      "tagline": "PyLoad",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "PyLoad",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/PyLoad/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "PyLoad (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "87a028ef1deac102d656394a03e3a5ccc67926a0f8b7faf1e33591bc1e538edb"
+      },
+      "compose_sha256": "b8a8904d25e0e8ba919f656b7bbc0985def6d1c415d64ff6f1904a2eae0092e1",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "pyload-ng",
+      "title": "pyload-ng",
+      "tagline": "The free and open-source Download Manager",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "pyload-ng",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "pyload-ng/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "pyload-ng (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "df663bfaf18fb401361847c159441e4ce7f93f00f5890a169b1d887a7998a568"
+      },
+      "compose_sha256": "053bc4e9bdf8f300b1f93fd84de871d8ba255808af9d73efa21238866cb52dd0",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "qbittorrent",
+      "title": "qBittorrent",
+      "tagline": "Free BitTorrent downloader",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8181,
+          "host": 8181,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "qBittorrent",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/qBittorrent/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "qBittorrent (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "0626a6de4b8b6abbc2b7a4557fa012ff6e77baedb21e493737566c576d5ea8cb"
+      },
+      "compose_sha256": "1b3fa8ee11c510ba04675060cbd5e85597852e419c3dfba20e4e1a6d8db26d83",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "radarr",
+      "title": "Radarr",
+      "tagline": "The movie collection manager for Usenet and BitTorrent users",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 7878,
+          "host": 7878,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Radarr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Radarr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Radarr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "8378eef99f484d5fd010d71c2b4b2567d0448a5a344cd5c396759f2bde0c532a"
+      },
+      "compose_sha256": "13060684b76002340e5175c900f42da09521794261bd8625d0c87f489c809224",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "readarr",
+      "title": "Readarr",
+      "tagline": "Ebook and audiobook collection manager for Usenet and BitTorrent users.",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8787,
+          "host": 8787,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Readarr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Readarr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Readarr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "0af9d4677ad02b77676eebb26ca9ed457aabaeddc835aa8314bf5bde3c656c70"
+      },
+      "compose_sha256": "f65409272593436a47bd4a11743a76a0a175c27e42622cc47948f04ba945306b",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "readur",
+      "title": "Readur",
+      "tagline": "An intuitive OCR platform for documents",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "readur",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "readur/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Readur (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "bf31c0e43b9676ce2e27dd4a5e92bc3bdbca12e3ba7097aef8e9011e814e7ae6"
+      },
+      "compose_sha256": "4eac0ec96be1234920e92f7066edf0c53e18ab56e7b6c5f7f82586cff4ab366c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "remmina",
+      "title": "Remmina",
+      "tagline": "Remote access screen and file sharing",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "remmina",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "remmina/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Remmina (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "c8dc23fd966d103d94abf637a167d82ad05c2588c21b128e24ecf9f8bfa07533"
+      },
+      "compose_sha256": "227b2acce1de35ef36856073e5fadd5787dacbfd37681d63bfd2a2f520f39349",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "resilio-sync",
+      "title": "Resilio-sync",
+      "tagline": "Resilio-sync",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 55555,
+          "host": 55555,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Resilio-sync",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Resilio-sync/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Resilio-sync (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "08d7d0871029624240edf8f87578a3fedc3d124d756540a3147fb21391013ce6"
+      },
+      "compose_sha256": "fbc107cf27095fa3575046582881e6e78a0f47f213bb43470c0924fc71192acd",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "sabnzbd",
+      "title": "Sabnzbd",
+      "tagline": "Free and easy binary newsreader",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8282,
+          "host": 8282,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Sabnzbd",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Sabnzbd/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Sabnzbd (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "75c4b3a3cb06bd7cea81579ea92908c072547202382d6f69045b71384c8d35d7"
+      },
+      "compose_sha256": "134a60c570f0ef73411b59d7661f7d6aa2a92166ea9ee1768c4fb0def02298cd",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "sickchill",
+      "title": "Sickchill",
+      "tagline": "Automatic video library manager for TV Shows",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8081,
+          "host": 8081,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Sickchill",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Sickchill/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Sickchill (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "b89d43917d2447de967b2c2987235ccd6f7937952bad7af95369cda89b3ce25c"
+      },
+      "compose_sha256": "66c3ad0eaad5ac26cc02e3f9d3262ac963e80b4c469d3aef6057e8b8aef3218b",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "smokeping",
+      "title": "Smokeping",
+      "tagline": "Free open source network performance monitoring tool",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 10280,
+          "host": 10280,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Smokeping",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Smokeping/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Smokeping (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "f7363d879d7304bfae73c269f98002d046a2759ecfa11ab9192391b29508b59e"
+      },
+      "compose_sha256": "3914289e09dc6727d65d9e73b780ad1b21367bba62651904c58f4f38d01c6845",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "snapdrop",
+      "title": "Snapdrop",
+      "tagline": "Snapdrop",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 443,
+          "host": 443,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Snapdrop",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Snapdrop/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Snapdrop (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "a87840f81e9120413c4e8c2461d61524918f5182752b5b9322d4ef5c8f1ea531"
+      },
+      "compose_sha256": "7266cc54e9cd270d5a3b32dfe07f9bdca217685ef86838dcd8279b421adf8bdd",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "sonarr",
+      "title": "Sonarr",
+      "tagline": "The PVR for Usenet and BitTorrent users",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8989,
+          "host": 8989,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Sonarr",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Sonarr/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Sonarr (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "bff32b480b7faf0060edcd06cf714bc61159105383a4dd6e2056f4a6fc7a7db1"
+      },
+      "compose_sha256": "ff2b6f2185e5e1c375344cbb978513518242a77e7c5a01855028a40380740db3",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "sqlitebrowser",
+      "title": "SQLite Browser",
+      "tagline": "A database browser for SQLite",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "sqlitebrowser",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "sqlitebrowser/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "SQLite Browser (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "84b450af1a2cec674a48edf40b2481e4a276b86052899e755227411a054c8f81"
+      },
+      "compose_sha256": "793841b8f60f7d1fb375b84d699e8b3003ddb6111177612e536b56917fdcaba6",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "stirling-pdf",
+      "title": "Stirling PDF",
+      "tagline": "Merge, split, rotate, and convert PDFs with ease",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "stirling-pdf",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "stirling-pdf/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Stirling PDF (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "0503685ffc07d31e5dfba9f33eed4751c5802bf01ffed0de484cbae230f2f8e8"
+      },
+      "compose_sha256": "211673af6c188ac6273257c7a8eb58a751ab841fb6b776229342d1d7e9141279",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "sure",
+      "title": "Sure",
+      "tagline": "Sure",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 23000,
+          "host": 23000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Sure",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Sure/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Sure (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "d1c59c376cbd67940605935d1c21ad937104d0537ab74516740229badff40657"
+      },
+      "compose_sha256": "7ea5c50f759dc1c5226e0bb8f9d0f2d6807b619fe0061e5d9e75e8f125eec8bb",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "swingmusic",
+      "title": "SwingMusic",
+      "tagline": "SwingMusic",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 1970,
+          "host": 1970,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "SwingMusic",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/SwingMusic/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "SwingMusic (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "6df8cd4baad27d8071d0ceaba436e6f8cb2abc4912d97e4a3293e92b098b8aff"
+      },
+      "compose_sha256": "c03cdaa2a6a1cf6cd372fd3cb323361197d284a33eb7fc65445012420f2f67f7",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "syncthing",
+      "title": "Syncthing",
+      "tagline": "Free, secure, and distributed file synchronisation tool.",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8384,
+          "host": 8384,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Syncthing",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Syncthing/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Syncthing (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "28a0104ae47e64b1be00015f80d967a54f7a174ffc6a4fe0b59b6bf161813a1c"
+      },
+      "compose_sha256": "48179fd76f29f0ef3f2b04727c0aac651cd31e2d072738063302ed5972829360",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "tautulli",
+      "title": "Tautulli",
+      "tagline": "Monitor your Plex Media Server and much more.",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8181,
+          "host": 8181,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Tautulli",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Tautulli/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Tautulli (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "f9cb999e097c59dafd19ad87fd6fc214ec22f5323da9586f3c19881ba83d205a"
+      },
+      "compose_sha256": "7024044a0d2d9cf9ad1f43e6d98346e55bdefd5b7f04e36c2e76e76ccc54af89",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "termix",
+      "title": "Termix",
+      "tagline": "Manage your servers with built-in SSH, tunnels, and file access",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "termix",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "termix/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Termix (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "bea659b7f45aaf22a25f8a015291a133555fd1d76ea1c8b6d171854dda92324d"
+      },
+      "compose_sha256": "8f5243327ab20a12cf2455b16c735fd4d602d68e96196cc441ec27f56b05e1a6",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "thinkdashboard",
+      "title": "ThinkDashboard",
+      "tagline": "A lightweight, bookmark dashboard with keyboard shortcuts",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "thinkdashboard",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "thinkdashboard/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "ThinkDashboard (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "8c5def9a37c4da94a237dfe4393f3da08c957e3df57623ec539e5830b9e4829d"
+      },
+      "compose_sha256": "3683156ec621dc31ae86b780152ae14bd1628a36d2317e0b04fb1f99ee401739",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "transmission",
+      "title": "Transmission",
+      "tagline": "Transmission is a cross-platform BitTorrent client",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 9091,
+          "host": 9091,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Transmission",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Transmission/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Transmission (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "3e87c0ef26e9ae0dd18c026d5240cb46619195b89a7b931e470188e122d7333a"
+      },
+      "compose_sha256": "477952ac37f40c420abb9ac2ac7f057b9c2e1107a863d7938df946ef34702006",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "trip",
+      "title": "Trip",
+      "tagline": "Minimalist Map Tracker and Trip Planner",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "trip",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "trip/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Trip (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "0a7aa1cf1c1f3fa92e4d6992351e023df82772ce39d28694fb0070c5dcfb2304"
+      },
+      "compose_sha256": "0c813707128812a5e4a60f001d52905170d88868f2eacbf120ebfc1a2b95c803",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "umami",
+      "title": "Umami",
+      "tagline": "Simple, fast, privacy-focused alternative to Google Analytics",
+      "category": "Developer",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 25727,
+          "host": 25727,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "umami",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "umami/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Umami (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "490ebe55b0da90885515dba03b2f64ca7ce2de9caa81aea5f63ab8787ff44bc4"
+      },
+      "compose_sha256": "640e2a2e6bf2b3923042e7fcf1f107e068aa74d1273ac7c8f9fa35d75f0088cd",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "unifi-controller",
+      "title": "Unifi-controller",
+      "tagline": "The Unifi-controller software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3478,
+          "host": 3478,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Unifi-controller",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Unifi-controller/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Unifi-controller (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "85b4c9de1f6fc95211e343a4249d441f44920013027c54bac732e2471e2e176c"
+      },
+      "compose_sha256": "8224f8a79ebbb08e3777154ab476104b6d0de75dd5e19f85482da66672258b8a",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "uptime-kuma",
+      "title": "Uptime Kuma",
+      "tagline": "Self-hosted uptime monitoring tool",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3001,
+          "host": 3001,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "uptime-kuma",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "uptime-kuma/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Uptime Kuma (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "eea6d1dcb25003ee81f5289df0d1052999a1a420228fa2afd51e548a5ab23941"
+      },
+      "compose_sha256": "bdd7945c98ff82e7914978ba9fb220c525741fefbd101124fe9478e24b258c1c",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "uptimekuma",
+      "title": "Uptime Kuma",
+      "tagline": "A fancy monitoring tool",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3001,
+          "host": 3001,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "UptimeKuma",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/UptimeKuma/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Uptime Kuma (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "c5e4276c9223f6b46a40497df47dd34c1aef6fb0e3c53527b81f47b6391cec40"
+      },
+      "compose_sha256": "bb8a27257bff7e0ac2a273ca6ad2ab959acb3596b95dc7511cf43f263bfa1c71",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "vaultwarden",
+      "title": "Vaultwarden",
+      "tagline": "A self-hosted Bitwarden server",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 10380,
+          "host": 10380,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Vaultwarden",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Vaultwarden/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Vaultwarden (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "c08034d0d2a0a4ddae3cccfcef62876e82ee5d6b51d79490277b626e3d866add"
+      },
+      "compose_sha256": "cd9c099a4abd46b1a118ea07dd105ba1ce3f8e587e94bcad0245e025a65a8953",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "vert",
+      "title": "VERT",
+      "tagline": "A file conversion utility",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "vert",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "vert/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "VERT (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "0a6709cb4cc56776cccb40e34b73d0952e272ab3765f8e33c27a6558c27ea8e2"
+      },
+      "compose_sha256": "9a8bfcfb57f048f944937431454e56193aebb8f13dc4c1fa662dd55ea53be1a7",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "vikunja",
+      "title": "Vikunja",
+      "tagline": "The open-source, self-hostable to-do app",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3456,
+          "host": 3456,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "vikunja",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "vikunja/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Vikunja (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "232710ee4aa598611b36aca576fdff4c982ac55152b902fe98ca742b73d7fcf2"
+      },
+      "compose_sha256": "2c3d6aa464eec2d01863ec135f55662821397cc16dba1b176702191c67a3c315",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "wallabag",
+      "title": "Wallabag",
+      "tagline": "Wallabag",
+      "category": "System",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 25661,
+          "host": 25661,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "casaos-appstore",
+        "upstream_id": "Wallabag",
+        "upstream_repo": "https://github.com/IceWhaleTech/CasaOS-AppStore.git",
+        "upstream_path": "Apps/Wallabag/docker-compose.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.png",
+        "license": "nominative-fair-use",
+        "attribution": "Wallabag (logo trademark; sourced via CasaOS AppStore)",
+        "sha256": "495ff38f5903f4391fa9fa35dcc8409ae9b91a870f851f247f83f20f310e60e4"
+      },
+      "compose_sha256": "0c02b9e140a9dd7f5ac36c9bd825c63c8be636740e29e1cbacd877fc7f3d3464",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "webcheck",
+      "title": "WebCheck",
+      "tagline": "An all-in-one Open Source Intelligence tool for analyzing any website",
+      "category": "Network & VPN",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 3000,
+          "host": 3000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "webcheck",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "webcheck/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "WebCheck (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "0a42f88668a464f88a0ec3e5a47b366562815edfebfc2dbb7a89cdc78866ba67"
+      },
+      "compose_sha256": "21742fb0ba110411a6432ad4940ef3b2e20bad51d930df90a5fe4c5d1418453f",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "wingfit",
+      "title": "Wingfit",
+      "tagline": "An open-source minimalist fitness app",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "wingfit",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "wingfit/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Wingfit (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "3cc3dbcb4365bd139ec09aad11f28ab5ad728794a1dd3c35236e52c569540508"
+      },
+      "compose_sha256": "35d4606cc77868ecaf1344c0a704c42aa59684c6279accca5cea4761b879848a",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "wizarr",
+      "title": "Wizarr",
+      "tagline": "An advanced invitation and management system for media servers",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 5690,
+          "host": 5690,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "wizarr",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "wizarr/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Wizarr (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "147c0a27e7931121c0a45de7e008d7f4aa70335ac2115ec183993ff2396fdec2"
+      },
+      "compose_sha256": "04d0572d6c508d24dcb3b0373e12f2cc0b5dc4d1fbdac00495d83f31a01b6b03",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "wordpress",
+      "title": "WordPress",
+      "tagline": "The open source publishing platform of choice for millions of websites worldwide",
+      "category": "Productivity",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 80,
+          "host": 80,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "wordpress",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "wordpress/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "WordPress (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "fdeda6d1a42d3d4203161789767a7efcc2bcb613bcb2be10bc2b1dae3d22a9c2"
+      },
+      "compose_sha256": "2decaa9932b24a531c223fabff18e481d8ee6549523c3007fb107c70ce68a978",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "yamtrack",
+      "title": "Yamtrack",
+      "tagline": "A self hosted media tracker",
+      "category": "Media",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "yamtrack",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "yamtrack/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Yamtrack (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "5f212fd628f3f6c794840231ae0e31fcd230dc64aedecd90a5d8c2e3705d451c"
+      },
+      "compose_sha256": "868276842fdadf7bd2bd2b0e31ebd8d6f117a275a37d92dda7d1636672b8123d",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "zen",
+      "title": "Zen",
+      "tagline": "A simple app for focused and private note-taking",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8080,
+          "host": 8080,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "zen",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "zen/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "Zen (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "bf8f6ec660388f573de65928984e54e1becfb54f20e8d9a6dad9ff5e326c89cd"
+      },
+      "compose_sha256": "9195c722877668120e5bbfdd6493047ca27ab4d86f54a7d429bd55daece9411d",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    },
+    {
+      "store_app_id": "zeronote",
+      "title": "ZeroNote",
+      "tagline": "All your notes, passwords, bookmarks, and 2FA in one secure, offline-first app",
+      "category": "Files & Sync",
+      "headless": false,
+      "port_map": [
+        {
+          "container": 8000,
+          "host": 8000,
+          "protocol": "http"
+        }
+      ],
+      "source": {
+        "catalog": "umbrel-apps",
+        "upstream_id": "zeronote",
+        "upstream_repo": "https://github.com/getumbrel/umbrel-apps.git",
+        "upstream_path": "zeronote/umbrel-app.yml",
+        "transform_version": "1.0-powerlab-secure",
+        "synced_at": "2026-05-19T02:27:01Z"
+      },
+      "icon": {
+        "file": "icon.svg",
+        "license": "nominative-fair-use",
+        "attribution": "ZeroNote (logo trademark; sourced via Umbrel app gallery)",
+        "sha256": "9649ab89dc00badb34017d5729c073acc55b5f64b1d064dea87ca2f3bf037c7d"
+      },
+      "compose_sha256": "0cfaadb56b4d35c8102a4ece295a11a32cdc912220309309e46ab0320f3a1358",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "resource_hints": {}
+    }
+  ]
+}

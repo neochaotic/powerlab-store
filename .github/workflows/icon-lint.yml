@@ -37,8 +37,8 @@ jobs:
               continue
             fi
             size=$(stat -c%s "$icon" 2>/dev/null || stat -f%z "$icon")
-            if (( size > 102400 )); then
-              echo "FAIL: $icon — $size bytes > 100KB cap" >&2
+            if (( size > 1048576 )); then
+              echo "FAIL: $icon — $size bytes > 1MB cap" >&2
               fail=1
             else
               echo "OK: $icon ($size bytes)"

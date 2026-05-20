@@ -1,0 +1,37 @@
+name: metube
+services:
+  metube:
+    image: ghcr.io/alexta69/metube:2026.04.28@sha256:caf21da7d83a4003b429ef1126e9c1499f36f8401a1f8a7b158f70b94ade8edd
+    restart: on-failure
+    volumes:
+    - /DATA/PowerLabAppData/metube/${UMBREL_ROOT}/data/storage/downloads/metube:/downloads
+    environment:
+    - DELETE_FILE_ON_TRASHCAN=true
+version: '3.7'
+x-powerlab:
+  store_app_id: metube
+  title: MeTube
+  tagline: Download videos from YouTube
+  category: Media
+  port_map:
+  - container: 8081
+    host: 8081
+    protocol: http
+  source:
+    catalog: umbrel-apps
+    upstream_id: metube
+    upstream_repo: https://github.com/getumbrel/umbrel-apps.git
+    upstream_path: metube/umbrel-app.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.svg
+    license: nominative-fair-use
+    attribution: MeTube (logo trademark; sourced via Umbrel app gallery)
+  security:
+    image_pin: pinned
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: Alex Shnitman
+  developer: Alex Shnitman
+  main: metube

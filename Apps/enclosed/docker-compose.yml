@@ -1,0 +1,37 @@
+name: enclosed
+services:
+  web:
+    image: corentinth/enclosed:1.16.0-rootless@sha256:0631baee489b974cf16ffe3884c814e7bcc75df7bd36662b8ded76443b768d06
+    user: 1000:1000
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+    - /DATA/PowerLabAppData/enclosed/data:/app/.data
+version: '3.7'
+x-powerlab:
+  store_app_id: enclosed
+  title: Enclosed
+  tagline: Send private and secure notes
+  category: Files & Sync
+  port_map:
+  - container: 8787
+    host: 8787
+    protocol: http
+  source:
+    catalog: umbrel-apps
+    upstream_id: enclosed
+    upstream_repo: https://github.com/getumbrel/umbrel-apps.git
+    upstream_path: enclosed/umbrel-app.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.svg
+    license: nominative-fair-use
+    attribution: Enclosed (logo trademark; sourced via Umbrel app gallery)
+  security:
+    image_pin: pinned
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: Corentin Thomasset
+  developer: Corentin Thomasset
+  main: web

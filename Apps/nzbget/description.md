@@ -1,0 +1,3 @@
+# Nzbget
+
+Efficient Usenet downloader

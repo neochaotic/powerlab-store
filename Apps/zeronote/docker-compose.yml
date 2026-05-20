@@ -1,0 +1,37 @@
+name: zeronote
+services:
+  app:
+    image: ghcr.io/besoeasy/zeronote:1.0.7@sha256:368672d8bdc03a3a0632f241e4a53a2fed1240093eb88c82360c7d112474cbbe
+    user: 1000:1000
+    restart: on-failure
+    stop_grace_period: 5m
+    environment:
+    - NODE_ENV=production
+version: '3.7'
+x-powerlab:
+  store_app_id: zeronote
+  title: ZeroNote
+  tagline: All your notes, passwords, bookmarks, and 2FA in one secure, offline-first app
+  category: Files & Sync
+  port_map:
+  - container: 8000
+    host: 8000
+    protocol: http
+  source:
+    catalog: umbrel-apps
+    upstream_id: zeronote
+    upstream_repo: https://github.com/getumbrel/umbrel-apps.git
+    upstream_path: zeronote/umbrel-app.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.svg
+    license: nominative-fair-use
+    attribution: ZeroNote (logo trademark; sourced via Umbrel app gallery)
+  security:
+    image_pin: pinned
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: besoeasy
+  developer: besoeasy
+  main: app

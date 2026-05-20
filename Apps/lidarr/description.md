@@ -1,0 +1,3 @@
+# Lidarr
+
+Music collection manager for Usenet and BitTorrent users

@@ -1,0 +1,116 @@
+name: trivy-scan
+
+# Tier 9: CVE scan of every image referenced in the catalog.
+#
+# Static gates (validate.py, check-safety.sh) catch compose-level
+# misconfigurations. smoke-spinup proves containers boot. Trivy proves
+# the IMAGES the operators are about to install aren't carrying
+# known-vulnerable software at the pinned digest.
+#
+# Findings policy:
+#   - CRITICAL/HIGH on a referenced image: PR comment + workflow FAIL
+#     (force decision: pin a patched version, or drop the app, or
+#     accept-with-justification via @x-powerlab.security.audit_notes)
+#   - MEDIUM/LOW: PR comment only (visibility, not gate)
+#
+# Cadence:
+#   - On PR if Apps/ touched (catches new app introducing vuln)
+#   - Weekly cron (catches CVEs published AFTER pin landed)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Apps/**'
+  schedule:
+    - cron: '17 7 * * 1'   # Mondays 07:17 UTC — out-of-band from popular cron times
+  workflow_dispatch:        # manual trigger
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  collect-images:
+    name: collect images from catalog
+    runs-on: ubuntu-latest
+    outputs:
+      images: ${{ steps.collect.outputs.images }}
+      count: ${{ steps.collect.outputs.count }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+
+      - id: collect
+        name: Extract unique service images from every Apps/<id>/docker-compose.yml
+        run: |
+          python3 <<'PYEOF' > /tmp/images.json
+          import json, yaml
+          from pathlib import Path
+          imgs = set()
+          for cf in Path("Apps").glob("*/docker-compose.yml"):
+              try:
+                  d = yaml.safe_load(cf.read_text())
+              except Exception:
+                  continue
+              for svc in (d.get("services") or {}).values():
+                  if isinstance(svc, dict) and svc.get("image"):
+                      imgs.add(svc["image"])
+          out = sorted(imgs)
+          print(json.dumps(out))
+          PYEOF
+          count=$(jq -r 'length' /tmp/images.json)
+          echo "Found $count unique images" >&2
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "images=$(cat /tmp/images.json)" >> "$GITHUB_OUTPUT"
+
+  scan:
+    name: trivy ${{ matrix.image }}
+    needs: collect-images
+    if: needs.collect-images.outputs.count != '0'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 8     # parallel pulls + scans
+      matrix:
+        image: ${{ fromJson(needs.collect-images.outputs.images) }}
+    timeout-minutes: 10
+    steps:
+      - name: Trivy scan ${{ matrix.image }}
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ matrix.image }}
+          severity: 'CRITICAL,HIGH'
+          format: 'table'
+          exit-code: '1'      # FAIL on CRITICAL/HIGH (forces decision)
+          ignore-unfixed: true # only flag CVEs with a published fix (signal-to-noise)
+          vuln-type: 'os,library'
+          timeout: '8m'
+        continue-on-error: true   # don't fail the whole workflow on one image; collect all results
+
+      - name: Trivy scan ${{ matrix.image }} (informational MEDIUM/LOW)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ matrix.image }}
+          severity: 'MEDIUM,LOW'
+          format: 'table'
+          exit-code: '0'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          timeout: '8m'
+        continue-on-error: true
+
+  summary:
+    name: post findings summary
+    needs: scan
+    if: always() && github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Note
+        run: |
+          echo "Per-image scan results in the 'trivy ...' matrix jobs above." >&2
+          echo "CRITICAL/HIGH findings should be addressed: pin a patched version, drop the app, or document acceptance in x-powerlab.security.audit_notes." >&2

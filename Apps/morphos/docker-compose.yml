@@ -1,0 +1,34 @@
+name: morphos
+services:
+  web:
+    image: ghcr.io/danvergara/morphos-server:0.6.0@sha256:3d6f64ef386cbb6a7c5d55526e1a69da2d3661a1996d757897e92bf4369088f5
+    restart: on-failure
+    stop_grace_period: 1m
+version: '3.7'
+x-powerlab:
+  store_app_id: morphos
+  title: Morphos server
+  tagline: Self-hosted file converter
+  category: Files & Sync
+  port_map:
+  - container: 8080
+    host: 8080
+    protocol: http
+  source:
+    catalog: umbrel-apps
+    upstream_id: morphos
+    upstream_repo: https://github.com/getumbrel/umbrel-apps.git
+    upstream_path: morphos/umbrel-app.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.svg
+    license: nominative-fair-use
+    attribution: Morphos server (logo trademark; sourced via Umbrel app gallery)
+  security:
+    image_pin: pinned
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: Dan Vergara
+  developer: Dan Vergara
+  main: web

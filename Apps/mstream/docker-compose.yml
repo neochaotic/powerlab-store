@@ -1,0 +1,39 @@
+name: mstream
+services:
+  server:
+    image: linuxserver/mstream:6.7.1@sha256:400fc0549f52beecf1d1e3f98196bc43b85b987a9d4086fff4f17615ea57bc71
+    restart: on-failure
+    environment:
+    - PUID=1000
+    - PGID=1000
+    volumes:
+    - /DATA/PowerLabAppData/mstream/data:/config
+    - /DATA/PowerLabAppData/mstream/${UMBREL_ROOT}/data/storage/downloads/music:/music
+version: '3.7'
+x-powerlab:
+  store_app_id: mstream
+  title: mStream
+  tagline: A private music server
+  category: Media
+  port_map:
+  - container: 3000
+    host: 3000
+    protocol: http
+  source:
+    catalog: umbrel-apps
+    upstream_id: mstream
+    upstream_repo: https://github.com/getumbrel/umbrel-apps.git
+    upstream_path: mstream/umbrel-app.yml
+    transform_version: 1.0-powerlab-secure
+    synced_at: '2026-05-19T02:27:01Z'
+  icon:
+    file: icon.svg
+    license: nominative-fair-use
+    attribution: mStream (logo trademark; sourced via Umbrel app gallery)
+  security:
+    image_pin: pinned
+    audit_notes: Reviewed during import from upstream catalog (see x-powerlab.source). No init scripts, no privilege escalation,
+      no host-namespace bypass, no kernel capability grants. Volume paths rewritten to /DATA/PowerLabAppData/<id>.
+  author: Iros Software
+  developer: Iros Software
+  main: server

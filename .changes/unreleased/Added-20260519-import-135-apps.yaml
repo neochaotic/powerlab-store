@@ -1,0 +1,16 @@
+kind: Added
+body: |
+  Phase 1 catalog import: 135 apps converted from the external
+  curation pipeline artifact (139 source apps, 4 deliberately
+  excluded for security/schema violations — see PR description).
+
+  Composition: ~72 from Umbrel-derived composes, ~60 from
+  CasaOS-AppStore, 3 PowerLab-authored (Ollama CPU/Nvidia/AMD).
+  Image policy: all images on the trusted registry whitelist,
+  zero hooks/exports.sh, zero privileged/sock/host-namespace,
+  volumes rewritten to /DATA/PowerLabAppData/<id>/.
+
+  Apps still need digest-pinning (run scripts/pin-digests.sh)
+  before v0.1.0 cut. PR shipping as DRAFT until that's complete.
+custom:
+  App: "(catalog-wide)"
