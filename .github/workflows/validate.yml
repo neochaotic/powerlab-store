@@ -29,6 +29,13 @@ jobs:
       - name: Run check-safety.sh (structured hardening)
         run: ./scripts/check-safety.sh
 
+      - name: Check bundle compatibility with PowerLab core
+        run: |
+          # Verifies every app survives the bundle-store.sh format conversion
+          # (flat title/tagline → i18n map, list port_map → host string, icon file exists).
+          # This is the store↔core contract test — catches format regressions before release.
+          python3 scripts/check-bundle-compat.py
+
       - name: yamllint catalog files
         run: |
           pip install yamllint
