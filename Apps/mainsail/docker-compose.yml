@@ -4,8 +4,7 @@ services:
     image: ghcr.io/mainsail-crew/mainsail:sha-3783e07@sha256:c125fbc0de775cd97a526ca5e39deaa531f1c718f3a90253073c14a82cbe7acc
     restart: on-failure
     stop_grace_period: 1m
-    volumes:
-    - /DATA/PowerLabAppData/mainsail/data/config.json:/usr/share/nginx/html/config.json:ro
+    volumes: []
 version: '3.7'
 x-powerlab:
   store_app_id: mainsail

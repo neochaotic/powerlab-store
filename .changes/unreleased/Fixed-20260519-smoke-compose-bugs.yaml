@@ -1,0 +1,25 @@
+kind: Fixed
+body: |
+  Smoke CI + catalog correctness pass after Phase 1 import:
+
+  Compose bugs (would break in production):
+  - linkwarden: add missing top-level networks.linkwarden-net definition
+  - sure: add missing top-level networks.sure_net definition
+  - petio: add missing top-level networks.petio-network definition
+  - yamtrack: correct REDIS_URL from legacy docker-compose-v1 hostname
+    (yamtrack_redis_1) to docker-compose-v2 service name (redis)
+  - mainsail: remove config.json bind-mount that Docker materialises as a
+    directory, causing OCI mount failure; default embedded config is sufficient
+
+  Smoke workflow improvements:
+  - Auto-skip hardware-only apps (AMD ROCm /dev/kfd, Raspberry Pi
+    /dev/vchiq+/dev/vcsm, NVIDIA GPU runtime) — these require physical
+    devices not present on GitHub-hosted runners
+  - Pre-create /DATA/... bind-mount paths before compose up with sudo;
+    postgres data dirs chowned to UID 999 so postgres:16 initdb can chmod
+    them (GitHub Actions runner creates bind dirs as root otherwise)
+  - dcrpulse: relax depends_on condition from service_healthy to
+    service_started — dcrd requires blockchain sync before healthcheck
+    passes (hours+), dcrwallet/dashboard use restart:on-failure to retry
+custom:
+  App: "(catalog-wide)"

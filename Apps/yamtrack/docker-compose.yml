@@ -9,7 +9,7 @@ services:
     - redis
     environment:
       SECRET: ''
-      REDIS_URL: redis://yamtrack_redis_1:6379
+      REDIS_URL: redis://redis:6379
     volumes:
     - /DATA/PowerLabAppData/yamtrack/data/db:/yamtrack/db:rw
   redis:

@@ -76,7 +76,37 @@ jobs:
             exit 0
           fi
 
+      - name: Skip hardware-only apps
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          # Auto-skip apps that declare hardware not available in GitHub-hosted runners:
+          # AMD ROCm (/dev/kfd), Raspberry Pi VideoCore (/dev/vchiq, /dev/vcsm),
+          # and NVIDIA GPU runtime (deploy.resources.reservations.devices with nvidia caps).
+          python3 - <<'EOF'
+          import sys, yaml
+          from pathlib import Path
+          d = yaml.safe_load(Path('docker-compose.yml').read_text())
+          HARDWARE_DEVICES = {'/dev/kfd', '/dev/vchiq', '/dev/vcsm'}
+          for svc in (d.get('services') or {}).values():
+              if not isinstance(svc, dict):
+                  continue
+              for dev in (svc.get('devices') or []):
+                  host = dev.split(':')[0] if isinstance(dev, str) else ''
+                  if host in HARDWARE_DEVICES:
+                      print(f'::notice::Skipping smoke — requires {host} (hardware not in CI)')
+                      sys.exit(0)
+              deploy = (svc.get('deploy') or {})
+              for dr in ((deploy.get('resources') or {}).get('reservations', {}).get('devices') or []):
+                  if 'nvidia' in str((dr or {}).get('capabilities', [])):
+                      print('::notice::Skipping smoke — requires NVIDIA GPU (not in CI)')
+                      sys.exit(0)
+          sys.exit(1)  # no hardware found, continue
+          EOF
+          echo "SKIP=$?" >> "$GITHUB_ENV"
+        continue-on-error: true
+
       - name: Compose config (syntax)
+        if: env.SKIP != '0'
         working-directory: Apps/${{ matrix.app }}
         run: |
           # Substitute PowerLab's runtime env vars with safe defaults
@@ -86,7 +116,42 @@ jobs:
           mkdir -p "$POWERLAB_APP_DATA"
           docker compose config --quiet
 
+      - name: Pre-create bind-mount host paths
+        if: env.SKIP != '0'
+        working-directory: Apps/${{ matrix.app }}
+        run: |
+          # Create /DATA/... bind-mount paths before compose up so Docker doesn't
+          # create them as root (which breaks postgres initdb chmod). Postgres data
+          # dirs (mapped to /var/lib/postgresql/data) are chowned to UID 999
+          # (the postgres user in official postgres images) so initdb can chmod them.
+          python3 - <<'EOF'
+          import subprocess, sys, yaml
+          from pathlib import Path
+          d = yaml.safe_load(Path('docker-compose.yml').read_text())
+          for svc in (d.get('services') or {}).values():
+              if not isinstance(svc, dict):
+                  continue
+              for vol in (svc.get('volumes') or []):
+                  if isinstance(vol, str):
+                      parts = vol.split(':')
+                      host_path, container_path = parts[0], parts[1] if len(parts) > 1 else ''
+                  elif isinstance(vol, dict) and vol.get('type') == 'bind':
+                      host_path = vol.get('source', '')
+                      container_path = vol.get('target', '')
+                  else:
+                      continue
+                  if not host_path.startswith('/') or host_path.startswith('/dev'):
+                      continue
+                  subprocess.run(['sudo', 'mkdir', '-p', host_path], check=True)
+                  if 'postgresql' in container_path:
+                      subprocess.run(['sudo', 'chown', '999:999', host_path], check=True)
+                      subprocess.run(['sudo', 'chmod', '700', host_path], check=True)
+                  else:
+                      subprocess.run(['sudo', 'chmod', '777', host_path], check=True)
+          EOF
+
       - name: Pull images
+        if: env.SKIP != '0'
         working-directory: Apps/${{ matrix.app }}
         run: |
           export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
@@ -94,6 +159,7 @@ jobs:
           docker compose pull --quiet
 
       - name: Bring up
+        if: env.SKIP != '0'
         working-directory: Apps/${{ matrix.app }}
         run: |
           export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
@@ -101,6 +167,7 @@ jobs:
           docker compose up -d
 
       - name: Wait for healthy or 60s
+        if: env.SKIP != '0'
         working-directory: Apps/${{ matrix.app }}
         run: |
           export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
@@ -133,6 +200,7 @@ jobs:
           fi
 
       - name: Probe declared ports
+        if: env.SKIP != '0'
         working-directory: Apps/${{ matrix.app }}
         run: |
           # Extract host ports from x-powerlab.port_map and curl them.
@@ -177,7 +245,7 @@ jobs:
 
       - name: Grep logs for fatal patterns
         working-directory: Apps/${{ matrix.app }}
-        if: always()
+        if: always() && env.SKIP != '0'
         run: |
           export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"
           export POWERLAB_APP_DATA="/tmp/smoke-data"
@@ -195,7 +263,7 @@ jobs:
           echo "OK: no fatal patterns"
 
       - name: Tear down
-        if: always()
+        if: always() && env.SKIP != '0'
         working-directory: Apps/${{ matrix.app }}
         run: |
           export POWERLAB_APP_NAME="smoke-${{ matrix.app }}"

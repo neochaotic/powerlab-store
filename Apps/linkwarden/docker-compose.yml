@@ -73,6 +73,8 @@ services:
       resources:
         reservations:
           memory: 256m
+networks:
+  linkwarden-net: {}
 version: '3.7'
 x-powerlab:
   store_app_id: linkwarden

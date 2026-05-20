@@ -48,7 +48,7 @@ services:
       '
     depends_on:
       dcrd:
-        condition: service_healthy
+        condition: service_started
     healthcheck:
       test:
       - CMD
@@ -80,9 +80,9 @@ services:
       DCRWALLET_RPC_CERT: /app-data/dcrd/rpc.cert
     depends_on:
       dcrd:
-        condition: service_healthy
+        condition: service_started
       dcrwallet:
-        condition: service_healthy
+        condition: service_started
 version: '3.7'
 x-powerlab:
   store_app_id: dcrpulse

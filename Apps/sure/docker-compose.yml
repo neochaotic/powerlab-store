@@ -111,6 +111,8 @@ services:
       resources:
         reservations:
           memory: 1024M
+networks:
+  sure_net: {}
 version: '3.7'
 x-powerlab:
   store_app_id: sure

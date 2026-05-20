@@ -32,6 +32,8 @@ services:
       PUID: $PUID
       PGID: $PGID
       TZ: $TZ
+networks:
+  petio-network: {}
 version: '3.7'
 x-powerlab:
   store_app_id: petio
