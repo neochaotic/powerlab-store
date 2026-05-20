@@ -351,6 +351,31 @@ def validate_app(compose_path: Path) -> tuple[list[str], list[str]]:
                     "registry (see docs/curation-criteria.md)"
                 )
 
+            # Empty volumes list — PowerLab core's compose-go loader rejects
+            # `volumes: []`; omit the key entirely when there are none.
+            if "volumes" in svc and svc.get("volumes") == []:
+                errors.append(
+                    f"services.{svc_name}.volumes is an empty list — omit the "
+                    "key entirely (core's compose-go loader rejects it)"
+                )
+
+    # Leaked Umbrel-isms the importer must normalise. Core's strict catalog
+    # gates (hostname lint, compose-go loader) reject these and they break
+    # apps at runtime (DB unreachable / unresolved Umbrel infra).
+    project = str(compose.get("name") or app_dir.name)
+    if isinstance(services, dict):
+        for s in services:
+            if re.search(re.escape(project) + r"_" + re.escape(str(s)) + r"_\d+", raw):
+                errors.append(
+                    f"compose uses the Compose-v1 hostname {project}_{s}_<n>; "
+                    f"reference the service-name network alias {s!r} instead"
+                )
+    for ph in sorted(set(re.findall(r"\$\{(?:UMBREL_[A-Z_]*|TOR_PROXY_[A-Z_]*)\}", raw))):
+        errors.append(
+            f"compose references Umbrel-infra placeholder {ph} "
+            "(no PowerLab equivalent; remove or rewrite)"
+        )
+
     # security.image_pin sanity
     sec = xp.get("security") or {}
     if isinstance(sec, dict):

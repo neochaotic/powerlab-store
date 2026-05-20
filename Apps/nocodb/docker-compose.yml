@@ -8,7 +8,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      NC_DB: pg://nocodb_postgres_1:5432?u=nocodb&p=itworkslocally&d=nocodb
+      NC_DB: pg://postgres:5432?u=nocodb&p=itworkslocally&d=nocodb
     volumes:
     - /DATA/PowerLabAppData/nocodb/data/app:/usr/app/data
   postgres:

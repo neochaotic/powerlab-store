@@ -5,7 +5,7 @@ services:
     user: 1000:1000
     restart: on-failure
     environment:
-      DATABASE_URL: postgresql://readur:readur_password@readur_postgres_1:5432/readur
+      DATABASE_URL: postgresql://readur:readur_password@postgres:5432/readur
       JWT_SECRET: ''
       SERVER_ADDRESS: 0.0.0.0:8000
       UPLOAD_PATH: /app/uploads

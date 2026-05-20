@@ -17,7 +17,7 @@ services:
     image: ghcr.io/kittendevv/invio-frontend:v2.0.1@sha256:8dfc68bbc8063e66508a4750d9d3191aa8bbe0348d94560ae5ea0c61d3f1e852
     environment:
       PORT: 8000
-      BACKEND_URL: http://invio_backend_1:3000
+      BACKEND_URL: http://backend:3000
       COOKIE_SECURE: 'false'
       FRONTEND_SECURE_HEADERS_DISABLED: 'false'
       ENABLE_HSTS: 'false'

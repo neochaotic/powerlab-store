@@ -4,7 +4,7 @@ services:
     image: ghcr.io/alexta69/metube:2026.04.28@sha256:caf21da7d83a4003b429ef1126e9c1499f36f8401a1f8a7b158f70b94ade8edd
     restart: on-failure
     volumes:
-    - /DATA/PowerLabAppData/metube/${UMBREL_ROOT}/data/storage/downloads/metube:/downloads
+    - /DATA/PowerLabAppData/metube/data/storage/downloads/metube:/downloads
     environment:
     - DELETE_FILE_ON_TRASHCAN=true
 version: '3.7'

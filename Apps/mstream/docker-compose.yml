@@ -8,7 +8,7 @@ services:
     - PGID=1000
     volumes:
     - /DATA/PowerLabAppData/mstream/data:/config
-    - /DATA/PowerLabAppData/mstream/${UMBREL_ROOT}/data/storage/downloads/music:/music
+    - /DATA/PowerLabAppData/mstream/data/storage/downloads/music:/music
 version: '3.7'
 x-powerlab:
   store_app_id: mstream
