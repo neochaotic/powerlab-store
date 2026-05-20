@@ -50,10 +50,29 @@ Hard rule: **zero** `.sh` files anywhere under `Apps/<id>/`. Not `hooks/pre-star
 Apps/<store-app-id>/
 ├── docker-compose.yml         # required
 ├── icon.svg                   # required, ≤ 100KB (icon.png also acceptable)
-└── description.md             # required, long-form description (operator-facing)
+└── description.md             # required, operator-facing quickstart
 ```
 
 `<store-app-id>` is kebab-case, lowercase, no spaces. It MUST match the `x-powerlab.store_app_id` field in the compose file.
+
+**`description.md` template:**
+
+```markdown
+# App Name
+
+2-3 sentences: what the app does and who it's for.
+
+**First steps:** Open `http://<host>:<port>` after install[, then complete the setup wizard].
+
+**Default login:** `username` / `password` — change immediately after first login.
+
+**Data:** `/DATA/PowerLabAppData/<store-app-id>/` — what is stored here (DB, files, cache).
+```
+
+Rules:
+- Omit **Default login** if there are no hardcoded defaults (first-run wizard sets them).
+- For headless backends (databases, API servers), replace **First steps** with the connection string and label it **Port** or **API endpoint**.
+- Keep it short — one actionable paragraph, not a manual.
 
 ### 4. Author the compose file
 
